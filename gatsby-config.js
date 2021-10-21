@@ -4,6 +4,7 @@ module.exports = {
     title: "Wroconsult",
   },
   plugins: [
+    'gatsby-plugin-postcss',
     {
       resolve: "gatsby-source-datocms",
       options: {
@@ -23,7 +24,15 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/assets/img/icon.png",
+        name: `Wroconsult - studia wykonalności, restrukturyzacja, dofinansowanie, Wrocław, wroconsult.pl`,
+        short_name: `Wroconsult - studia wykonalności, restrukturyzacja, dofinansowanie`,
+        description: `Blisko 20-letnie doświadczenie doradców Wroconsult pozwala na skuteczną pomoc klientom z sektora publicznego i prywatnego.`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#BF1E2D`,
+        display: `standalone`,
+        lang: `pl`,
       },
     },
     "gatsby-plugin-mdx",
@@ -33,7 +42,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/assets/img/",
       },
       __key: "images",
     },
