@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "optimize": "svgo -f ./src/assets/svg && svgr -d ./src/assets/svg ./src/assets/svg"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
@@ -36,6 +37,7 @@
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
+    "@svgr/cli": "^5.5.0",
     "autoprefixer": "^10.3.7",
     "gatsby-plugin-postcss": "^4.14.0",
     "postcss": "^8.3.10",
