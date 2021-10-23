@@ -1,3 +1,5 @@
+import React from "react"
+
 export const NavbarData = [
     {
         Title: 'Home',
@@ -27,4 +29,7 @@ export const NavbarData = [
 export const NavbarDataButton = {
     Title: 'Kontakt',
     Link: '/kontakt'
+}
+export const FooterData = {
+    Title: <p>&copy; {new Date().getFullYear()} - Wroconsult Sp. z o.o.</p>
 }

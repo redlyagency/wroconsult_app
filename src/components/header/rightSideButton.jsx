@@ -2,36 +2,19 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import { NavbarDataButton } from "../../data/navbarData"
+import HeaderHook from "../header/headerStateStore"
 
-const RightSideButtonWrapper = styled.nav`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`
-const RightSideButtonElement = styled(Link)`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 38px;
-    width: 105px;
-    background-color: #BF1E2D;
-    border: 2px solid #BF1E2D;
-    border-radius: 5px;
-    color: white;
-    font-family: 'Poppins-Regular';
-    font-size: 14px;
+import { NavbarDataButton } from "../../data/layoutData"
 
-    :hover {
-        color: #BF1E2D;
-        background-color: white;
-    }
-`
+
 
 const RightSideButton = () => {
+    const { menu, showMenu } = HeaderHook
+
     return (
         <RightSideButtonWrapper>
             <RightSideButtonElement
+                showNav={menu}
                 to={ NavbarDataButton.Link }
             >
                 { NavbarDataButton.Title }

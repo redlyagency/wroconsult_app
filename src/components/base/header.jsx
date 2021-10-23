@@ -1,33 +1,91 @@
-import React from "react"
-import styled from "styled-components"
-
-import Navbar from "../header/navbar"
-import RightSideButton from "../header/rightSideButton"
-
-import LogoSVG from "../../assets/svg/logo.svg"
-
-const HeaderWrapper = styled.header`
-    margin-top: 50px;
-    height: 65px;
-    display: flex;
-    justify-content: space-between;
-`
-const Logo = styled.div`
-    height: 65px;
-    width: 154px;
-    background-image: url( ${ LogoSVG } );
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-`
+import React, { useState } from "react"
+import { NavbarDataButton, NavbarData } from "../../data/layoutData"
+import { Link } from "gatsby"
+import {
+    HeaderWrapper,
+    Logo,
+    MobileButtonWrapper,
+    MobileButtonInner,
+    NavbarWrapper,
+    Ul,
+    Li,
+    RightSideButtonWrapper,
+    RightSideButtonElement,
+    MobileNavSection,
+    NavbarWrapperMobile,
+    UlMobile,
+    LiMobile,
+    LinkMobile,
+    RightSideButtonWrapperMobile,
+    RightSideButtonElementMobile,
+} from "./header.style"
 
 const Header = () => {
+    const[menu, showMenu] = useState(false)
+
     return (
-        <HeaderWrapper>
-            <Logo />
-            <Navbar />
-            <RightSideButton />
-        </HeaderWrapper>
+        <>
+            <HeaderWrapper showNav={menu}>
+                <Logo showNav={menu} />
+                <MobileButtonWrapper showNav={menu} onClick={() => showMenu(!menu)}>
+                    <MobileButtonInner hamburger={menu} />
+                </MobileButtonWrapper>
+                {/* Navbar */}
+                <NavbarWrapper>
+                    <Ul>
+                        {NavbarData.map((value, index) => {
+                            return (
+                                <Li key={index}>
+                                    <Link
+                                        to={value.Link}
+                                        activeClassName="selected"
+                                    >
+                                        {value.Title}
+                                    </Link>
+                                </Li>
+                            )
+                        })}
+                    </Ul>
+                </NavbarWrapper>
+                {/* Right side button */}
+                <RightSideButtonWrapper>
+                    <RightSideButtonElement
+                        showNav={menu}
+                        to={ NavbarDataButton.Link }
+                    >
+                        { NavbarDataButton.Title }
+                    </RightSideButtonElement>
+                </RightSideButtonWrapper>
+            </HeaderWrapper>
+            <MobileNavSection showNav={menu}>
+                {/* Navbar */}
+                <NavbarWrapperMobile>
+                    <UlMobile>
+                        {NavbarData.map((value, index) => {
+                            return (
+                                <LiMobile key={index}>
+                                    <LinkMobile
+                                        to={value.Link}
+                                        activeClassName="selected2"
+                                    >
+                                        {value.Title}
+                                    </LinkMobile>
+                                </LiMobile>
+                            )
+                        })}
+                    </UlMobile>
+                </NavbarWrapperMobile>
+                {/* Right side button */}
+                <RightSideButtonWrapperMobile>
+                    <RightSideButtonElementMobile
+                        showNav={menu}
+                        to={ NavbarDataButton.Link }
+                    >
+                        { NavbarDataButton.Title }
+                    </RightSideButtonElementMobile>
+                </RightSideButtonWrapperMobile>
+            </MobileNavSection>
+        </>
     )
 }
 
