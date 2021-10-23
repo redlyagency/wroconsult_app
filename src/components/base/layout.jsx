@@ -63,7 +63,7 @@ const Layout = (props) => {
                 <meta charSet="utf-8" />
                 <title>Wroconsult | studia wykonalności, restrukturyzacja, dofinansowanie</title>
                 <meta name="description" content="Blisko 20-letnie doświadczenie doradców Wroconsult pozwala na skuteczną pomoc klientom z sektora publicznego i prywatnego." />
-                <link rel="canonical" href="http://www.wroconsult.pl" />
+                <link rel="canonical" href="https://www.wroconsult.pl" />
             </Helmet>
             <Header />
             {props.children}
