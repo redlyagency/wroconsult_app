@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import LogoSVG from "../../assets/svg/logo.svg"
 import BgLine from "../../assets/svg/bg_line.svg"
 
+import HoverLogo from "../../assets/gif/normal_logo.gif"
+
 import "../../fonts/fonts.css"
 
 export const HeaderWrapper = styled.header`
@@ -32,6 +34,11 @@ export const Logo = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     margin-top: ${({showNav}) => showNav ? '20px' : '0'};
+    transition: 1s !important;
+
+    :hover {
+        background-image: url( ${ HoverLogo } );
+    }
 `
 
 export const MobileButtonWrapper = styled.button`
@@ -147,6 +154,7 @@ export const RightSideButtonElement = styled(Link)`
     color: white;
     font-family: 'Poppins-Regular';
     font-size: 14px;
+    transition: 0.2s;
 
     :hover {
         color: #BF1E2D;
@@ -220,6 +228,7 @@ export const RightSideButtonElementMobile = styled(Link)`
     border-radius: 5px;
     border: 2px #BF1E2D solid;
     background-color: #BF1E2D;
+    transition: 0.2s;
 
     :hover {
         background-color: transparent;
