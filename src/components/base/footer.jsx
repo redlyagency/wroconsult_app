@@ -17,6 +17,10 @@ const FooterWrapper = styled.footer`
         left: -80px;
         font-size: 13px;
     }
+    @media (max-width: 645px) {
+        left: -83px;
+        font-size: 13px;
+    }
 `
 
 const Footer = () => {

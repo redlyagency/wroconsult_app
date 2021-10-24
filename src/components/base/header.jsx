@@ -26,7 +26,9 @@ const Header = () => {
     return (
         <>
             <HeaderWrapper showNav={menu}>
-                <Logo showNav={menu} />
+                <Link to="/">
+                    <Logo showNav={menu} />
+                </Link>
                 <MobileButtonWrapper showNav={menu} onClick={() => showMenu(!menu)}>
                     <MobileButtonInner hamburger={menu} />
                 </MobileButtonWrapper>

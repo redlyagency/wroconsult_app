@@ -10,7 +10,6 @@ const GlobalStyle = createGlobalStyle`
     * {
         box-sizing: border-box;
         font-family: 'Poppins';
-        transition: 0.2s !important;
     }
     #root {margin: 0;padding: 0;}
     ::-webkit-scrollbar {width: 13px;} 
