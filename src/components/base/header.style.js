@@ -180,7 +180,13 @@ export const MobileNavSection = styled.div`
     }
 `
 
-export const NavbarWrapperMobile = styled.nav``
+export const NavbarWrapperMobile = styled.nav`
+    @media (max-height: 500px) {
+        display: flex;
+        align-items: baseline;
+        margin-top: 50px;
+    }
+`
 export const UlMobile = styled.ul``
 export const LiMobile = styled.li`
     position: relative;
@@ -206,6 +212,12 @@ export const LiMobile = styled.li`
 
     @media (max-height: 650px) {
         margin-top: 10px;
+    }
+    @media (max-height: 500px) {
+        display: inline-flex;
+        justify-content: center;
+        align-items: baseline;
+        margin-left: 10px;
     }
 `
 export const LinkMobile = styled(Link)`

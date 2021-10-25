@@ -93,7 +93,19 @@ const SvgLogoPathFinder = [
 export default function App() {
     return (
         <>
-            <Swiper style={{height: '100%'}} slidesPerView={6} spaceBetween={30} autoplay={{"delay": 2500, "disableOnInteraction": false}} className="mySwiper">
+            <Swiper style={{height: '100%'}} slidesPerView={2} spaceBetween={30} autoplay={{"delay": 2500, "disableOnInteraction": false}} loop={true} className="mySwiper"
+            breakpoints={{
+                // when window width is >= 640px
+                1023: {
+                slidesPerView: 6,
+                },
+                // when window width is >= 640px
+                767: {
+                slidesPerView: 3,
+                },
+                // when window width is >= 768px
+            }}
+            >
                 {SvgLogoPathFinder.map((value, index) => {
                     const SvgLogo = styled.div`
                         background-image: url( ${ value.SvgPath } );
@@ -102,6 +114,10 @@ export default function App() {
                         background-repeat: no-repeat;
                         width: 100%;
                         height: 100%;
+
+                        @media (max-width: 1023px) {
+                            background-size: 50%;
+                        }
                     `
                     return (
                         <SwiperSlide className={ value.Class }>
