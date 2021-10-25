@@ -65,7 +65,7 @@ const Layout = (props) => {
                 <link rel="canonical" href="https://www.wroconsult.pl" />
             </Helmet>
             <Header />
-            {props.children}
+                {props.children}
             <Footer />
         </LayoutWrapper>
     )

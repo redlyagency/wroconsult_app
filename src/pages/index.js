@@ -30,7 +30,11 @@ const HeroContainer = styled.div`
 const StyledMainHeaderHero = styled.div`
   line-height: 75px;
   font-size: 70px;
-
+  
+  @media (max-width: 1535px) {
+    line-height: 70px;
+    font-size: 65px;
+  }
   @media (max-width: 1279px) {
     line-height: 65px;
     font-size: 60px;
@@ -39,13 +43,21 @@ const StyledMainHeaderHero = styled.div`
     line-height: 55px;
     font-size: 50px;
   }
-  @media (max-width: 470px) {
+  @media (max-width: 600px) {
+    line-height: 50px;
+    font-size: 45px;
+  }
+  @media (max-width: 500px) {
     line-height: 45px;
     font-size: 40px;
   }
-  @media (max-width: 385px) {
+  @media (max-width: 450px) {
     line-height: 35px;
     font-size: 30px;
+  }
+  @media (max-width: 350px) {
+    line-height: 30px;
+    font-size: 25px;
   }
 `
 const StyledUnderMainHeaderHero = styled.div`
@@ -55,8 +67,17 @@ const StyledUnderMainHeaderHero = styled.div`
     float: right;
     padding: 5px 0 15px 0;
 
+    @media (max-width: 1535px) {
+      font-size: 17.5px;
+    }
     @media (max-width: 1279px) {
       font-size: 17px;
+    }
+    @media (max-width: 600px) {
+      font-size: 12px;
+    }
+    @media (max-width: 500px) {
+      font-size: 11px;
     }
 `
 const StyledMarkSliderContainer = styled.div`
@@ -79,6 +100,23 @@ const SliderElement = styled.div`
   }
   @media (max-width: 1023px) {
     width: 500px;
+  }
+  @media (max-width: 767px) {
+    width: 400px;
+  }
+  @media (max-width: 600px) {
+    width: 350px;
+  }
+  @media (max-width: 500px) {
+    width: 300px;
+  }
+  @media (max-width: 450px) {
+    width: 250px;
+    margin-left: 0;
+  }
+  @media (max-width: 350px) {
+    width: 200px;
+    margin-left: 15px;
   }
 `
 
