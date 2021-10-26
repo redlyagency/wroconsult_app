@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.wroconsult.pl",
     title: "Wroconsult",
   },
   plugins: [
@@ -25,12 +25,6 @@ module.exports = {
     },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "changeItBeforeFinalDeploy",
-      },
-    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {

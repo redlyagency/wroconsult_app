@@ -17,6 +17,7 @@ export const HeaderWrapper = styled.header`
     background-color: #FFFFFFD9;
     position: sticky;
     top: 50px;
+    z-index: 99999;
 
     @media (max-width: 1023px) {
         background-color: white;
@@ -24,6 +25,17 @@ export const HeaderWrapper = styled.header`
         top: ${({showNav}) => showNav ? '0' : '20px'};
         height: ${({showNav}) => showNav ? '100vh' : '75px'};
         padding: 0 20px 0 20px;
+
+        :before {
+            content: '';
+            background-color: white;
+            width: ${({showNav}) => showNav ? '100%' : '0'};
+            height: ${({showNav}) => showNav ? '100%' : '0'};
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
     }
 `
 export const Logo = styled.div`
@@ -35,6 +47,7 @@ export const Logo = styled.div`
     background-position: center;
     margin-top: ${({showNav}) => showNav ? '20px' : '0'};
     transition: 1s !important;
+    z-index: 9999;
 
     :hover {
         background-image: url( ${ HoverLogo } );
@@ -173,7 +186,7 @@ export const MobileNavSection = styled.div`
     background-image: url( ${ BgLine } );
     background-size: 250%;
     background-position: center;
-
+    z-index: 999999999999;
 
     @media (max-width: 1023px) {
         display: unset;
