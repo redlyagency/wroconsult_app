@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { Link } from "gatsby"
 
-import LogoSVG from "../../assets/svg/logo.svg"
-import BgLine from "../../assets/svg/bg_line.svg"
+import LogoSVG from "../assets/svg/logo.svg"
+import BgLine from "../assets/svg/bg_line.svg"
 
-import HoverLogo from "../../assets/gif/normal_logo.gif"
+import HoverLogo from "../assets/gif/normal_logo.gif"
 
-import "../../fonts/fonts.css"
+import "../fonts/fonts.css"
 
 export const HeaderWrapper = styled.header`
     margin-top: 50px;
@@ -212,12 +212,16 @@ export const LiMobile = styled.li`
 
     @media (max-height: 650px) {
         margin-top: 10px;
+
+        :first-child {
+            margin-top: 30px;
+        }
     }
     @media (max-height: 500px) {
         display: inline-flex;
         justify-content: center;
         align-items: baseline;
-        margin-left: 10px;
+        margin-left: 50px;
     }
 `
 export const LinkMobile = styled(Link)`

@@ -18,7 +18,7 @@ import {
     LinkMobile,
     RightSideButtonWrapperMobile,
     RightSideButtonElementMobile,
-} from "./header.style"
+} from "../../styles/header.style"
 
 const Header = () => {
     const[menu, showMenu] = useState(false)

@@ -4,6 +4,18 @@ module.exports = {
     title: "Wroconsult",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: 'G-8HX8DD1BYR',
+          // Setting this parameter is optional
+          anonymize: true
+        },
+        // Defines the environments where the tracking should be available  - default is ["production"]
+        environments: ['production', 'development']
+      },
+    },
     'gatsby-plugin-postcss',
     {
       resolve: "gatsby-source-datocms",
