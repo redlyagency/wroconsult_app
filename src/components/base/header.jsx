@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { NavbarDataButton, NavbarData } from "../../utils/data/layoutData"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import {
     HeaderWrapper,
     Logo,
@@ -26,9 +26,14 @@ const Header = () => {
     return (
         <>
             <HeaderWrapper showNav={menu}>
-                <Link to="/">
+                <AniLink 
+                    to="/"
+                    paintDrip
+                    hex="#BF1E2D"
+                    duration={0.5}
+                >
                     <Logo showNav={menu} />
-                </Link>
+                </AniLink>
                 <MobileButtonWrapper showNav={menu} onClick={() => showMenu(!menu)}>
                     <MobileButtonInner hamburger={menu} />
                 </MobileButtonWrapper>
@@ -38,12 +43,15 @@ const Header = () => {
                         {NavbarData.map((value, index) => {
                             return (
                                 <Li key={index}>
-                                    <Link
+                                    <AniLink
+                                        paintDrip
+                                        hex="#BF1E2D"
+                                        duration={0.5}
                                         to={value.Link}
                                         activeClassName="selected"
                                     >
                                         {value.Title}
-                                    </Link>
+                                    </AniLink>
                                 </Li>
                             )
                         })}
@@ -53,6 +61,9 @@ const Header = () => {
                 <RightSideButtonWrapper>
                     <RightSideButtonElement
                         showNav={menu}
+                        paintDrip
+                        hex="#BF1E2D"
+                        duration={0.5}
                         to={ NavbarDataButton.Link }
                     >
                         { NavbarDataButton.Title }
@@ -67,7 +78,10 @@ const Header = () => {
                             return (
                                 <LiMobile key={index}>
                                     <LinkMobile
+                                        paintDrip
+                                        hex="#BF1E2D"
                                         to={value.Link}
+                                        duration={0.5}
                                         activeClassName="selected2"
                                     >
                                         {value.Title}
@@ -81,6 +95,9 @@ const Header = () => {
                 <RightSideButtonWrapperMobile>
                     <RightSideButtonElementMobile
                         showNav={menu}
+                        paintDrip
+                        hex="#BF1E2D"
+                        duration={0.5}
                         to={ NavbarDataButton.Link }
                     >
                         { NavbarDataButton.Title }

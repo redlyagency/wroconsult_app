@@ -11,6 +11,8 @@ import { UslugiPageData } from "../utils/data/uslugiPageData"
 import { Headers } from "../utils/data/headersData"
 
 import H1 from "../components/Headers/h1"
+import H2 from "../components/Headers/h2"
+import P1 from "../components/paragraphs/p1"
 
 const IndexPage = () => {
   return (
@@ -19,12 +21,18 @@ const IndexPage = () => {
         <H1
           name={ Headers.Uslugi }
         />
-        <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
           {UslugiPageData.map((value, index) => {
             return (
               <>
-                <div key={index}>{value.Title}</div>
-                <div key={index}>{value.Content}</div>
+                <H2
+                  key={index}
+                  name={value.Title}
+                />
+                <P1 
+                  key={index}
+                  name={value.Content}
+                />
               </>
             )
           })}

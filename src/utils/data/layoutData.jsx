@@ -41,5 +41,5 @@ export const CookieDataAlert = {
     AcceptBtn: 'Akceptuj'
 }
 export const FooterData = {
-    Title: <p>&copy; {new Date().getFullYear()} - Wroconsult Sp. z o.o.</p>
+    Title: <p style={{textAlign: 'center'}}>&copy; {new Date().getFullYear()} - Wroconsult Sp. z o.o.</p>
 }

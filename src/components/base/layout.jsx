@@ -13,41 +13,43 @@ import "../../fonts/fonts.css"
 
 const Layout = (props) => {
     return (
-        <div className="container">
-            <GlobalStyle />
-            <Helmet
-                htmlAttributes={{
-                    lang: 'pl',
-                }}
-            >
-                <meta
-                    charSet="utf-8"
-                />
-                <title>
-                    { HelmetData.Title }
-                </title>
-                <meta
-                    name="description"
-                    content={ HelmetData.Description }
-                />
-                <link
-                    rel="canonical" href={ HelmetData.WebsiteLink }
-                />
-            </Helmet>
-            <Header />
-                {props.children}
-            <CookieConsent
-                buttonText={ CookieDataAlert.AcceptBtn }
-                cookieName="gatsby-gdpr-google-analytics"
-                disableStyles="true"
-                containerClasses="StyledContainerClasses"
-                buttonClasses="StyledButtonClasses"
-                contentClasses="StyledContentClasses"
-            >
-                {CookieDataAlert.Content}
-            </CookieConsent>
+        <>
+            <div className="container">
+                <GlobalStyle />
+                <Helmet
+                    htmlAttributes={{
+                        lang: 'pl',
+                    }}
+                >
+                    <meta
+                        charSet="utf-8"
+                    />
+                    <title>
+                        { HelmetData.Title }
+                    </title>
+                    <meta
+                        name="description"
+                        content={ HelmetData.Description }
+                    />
+                    <link
+                        rel="canonical" href={ HelmetData.WebsiteLink }
+                    />
+                </Helmet>
+                <Header />
+                    {props.children}
+                <CookieConsent
+                    buttonText={ CookieDataAlert.AcceptBtn }
+                    cookieName="gatsby-gdpr-google-analytics"
+                    disableStyles="true"
+                    containerClasses="StyledContainerClasses"
+                    buttonClasses="StyledButtonClasses"
+                    contentClasses="StyledContentClasses"
+                >
+                    {CookieDataAlert.Content}
+                </CookieConsent>
+            </div>
             <Footer />
-        </div>
+        </>
     )
 }
 

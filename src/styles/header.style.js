@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import LogoSVG from "../assets/svg/logo.svg"
 import BgLine from "../assets/svg/bg_line.svg"
@@ -20,7 +20,7 @@ export const HeaderWrapper = styled.header`
     z-index: 99999;
 
     @media (max-width: 1023px) {
-        background-color: white;
+        background-color: #FFFFFFD9;
         margin-top: ${({showNav}) => showNav ? '0' : '20px'};
         top: ${({showNav}) => showNav ? '0' : '20px'};
         height: ${({showNav}) => showNav ? '100vh' : '75px'};
@@ -155,7 +155,7 @@ export const RightSideButtonWrapper = styled.nav`
         display: none;
     }
 `
-export const RightSideButtonElement = styled(Link)`
+export const RightSideButtonElement = styled(AniLink)`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -237,7 +237,7 @@ export const LiMobile = styled.li`
         margin-left: 50px;
     }
 `
-export const LinkMobile = styled(Link)`
+export const LinkMobile = styled(AniLink)`
     font-size: 30px;
     font-family: 'Poppins-SemiBold';
     color: #76777A;
@@ -249,7 +249,7 @@ export const RightSideButtonWrapperMobile = styled.nav`
     left: 50%;
     transform: translateX(-50%);
 `
-export const RightSideButtonElementMobile = styled(Link)`
+export const RightSideButtonElementMobile = styled(AniLink)`
     padding: 7px 110px 7px 110px;
     font-size: 20px;
     color: white;
