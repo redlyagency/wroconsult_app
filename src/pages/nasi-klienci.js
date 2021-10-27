@@ -13,7 +13,7 @@ import H1 from "../components/Headers/h1"
 import H2 from "../components/Headers/h2"
 import P1 from "../components/paragraphs/p1"
 
-const IndexPage = () => {
+const NasiKlienciPage = () => {
   return (
     <Layout>
       <PageWrapper>
@@ -42,4 +42,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default NasiKlienciPage
