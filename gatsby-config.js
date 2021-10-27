@@ -1,9 +1,21 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.wroconsult.pl",
     title: "Wroconsult",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: 'G-8HX8DD1BYR',
+          // Setting this parameter is optional
+          anonymize: true
+        },
+        // Defines the environments where the tracking should be available  - default is ["production"]
+        environments: ['production', 'development']
+      },
+    },
     'gatsby-plugin-postcss',
     {
       resolve: "gatsby-source-datocms",
@@ -13,12 +25,6 @@ module.exports = {
     },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "changeItBeforeFinalDeploy",
-      },
-    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
@@ -30,7 +36,7 @@ module.exports = {
         description: `Blisko 20-letnie doświadczenie doradców Wroconsult pozwala na skuteczną pomoc klientom z sektora publicznego i prywatnego.`,
         start_url: `/`,
         background_color: `#f7f0eb`,
-        theme_color: `#BF1E2D`,
+        theme_color: `#f7f0eb`,
         display: `standalone`,
         lang: `pl`,
       },
@@ -54,5 +60,6 @@ module.exports = {
       },
       __key: "pages",
     },
+    `gatsby-plugin-transition-link`,
   ],
 };

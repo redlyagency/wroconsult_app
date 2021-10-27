@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
-import LogoSVG from "../../assets/svg/logo.svg"
-import BgLine from "../../assets/svg/bg_line.svg"
+import LogoSVG from "../assets/svg/logo.svg"
+import BgLine from "../assets/svg/bg_line.svg"
 
-import HoverLogo from "../../assets/gif/normal_logo.gif"
+import HoverLogo from "../assets/gif/normal_logo.gif"
 
-import "../../fonts/fonts.css"
+import "../fonts/fonts.css"
 
 export const HeaderWrapper = styled.header`
     margin-top: 50px;
@@ -17,13 +17,25 @@ export const HeaderWrapper = styled.header`
     background-color: #FFFFFFD9;
     position: sticky;
     top: 50px;
+    z-index: 99999;
 
     @media (max-width: 1023px) {
-        background-color: white;
+        background-color: #FFFFFFD9;
         margin-top: ${({showNav}) => showNav ? '0' : '20px'};
         top: ${({showNav}) => showNav ? '0' : '20px'};
         height: ${({showNav}) => showNav ? '100vh' : '75px'};
         padding: 0 20px 0 20px;
+
+        :before {
+            content: '';
+            background-color: white;
+            width: ${({showNav}) => showNav ? '100%' : '0'};
+            height: ${({showNav}) => showNav ? '100%' : '0'};
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
     }
 `
 export const Logo = styled.div`
@@ -35,6 +47,7 @@ export const Logo = styled.div`
     background-position: center;
     margin-top: ${({showNav}) => showNav ? '20px' : '0'};
     transition: 1s !important;
+    z-index: 9999;
 
     :hover {
         background-image: url( ${ HoverLogo } );
@@ -142,7 +155,7 @@ export const RightSideButtonWrapper = styled.nav`
         display: none;
     }
 `
-export const RightSideButtonElement = styled(Link)`
+export const RightSideButtonElement = styled(AniLink)`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,7 +186,7 @@ export const MobileNavSection = styled.div`
     background-image: url( ${ BgLine } );
     background-size: 250%;
     background-position: center;
-
+    z-index: 999999999999;
 
     @media (max-width: 1023px) {
         display: unset;
@@ -212,15 +225,19 @@ export const LiMobile = styled.li`
 
     @media (max-height: 650px) {
         margin-top: 10px;
+
+        :first-child {
+            margin-top: 30px;
+        }
     }
     @media (max-height: 500px) {
         display: inline-flex;
         justify-content: center;
         align-items: baseline;
-        margin-left: 10px;
+        margin-left: 50px;
     }
 `
-export const LinkMobile = styled(Link)`
+export const LinkMobile = styled(AniLink)`
     font-size: 30px;
     font-family: 'Poppins-SemiBold';
     color: #76777A;
@@ -232,7 +249,7 @@ export const RightSideButtonWrapperMobile = styled.nav`
     left: 50%;
     transform: translateX(-50%);
 `
-export const RightSideButtonElementMobile = styled(Link)`
+export const RightSideButtonElementMobile = styled(AniLink)`
     padding: 7px 110px 7px 110px;
     font-size: 20px;
     color: white;

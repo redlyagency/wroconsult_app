@@ -90,7 +90,7 @@ const SvgLogoPathFinder = [
     },
 ]
 
-export default function App() {
+export default function SliderWithLogos() {
     return (
         <>
             <Swiper style={{height: '100%'}} slidesPerView={2} spaceBetween={30} autoplay={{"delay": 2500, "disableOnInteraction": false}} loop={true} className="mySwiper"
