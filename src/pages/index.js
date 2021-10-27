@@ -12,7 +12,7 @@ import {
   SliderElement,
 } from "../styles/index.style"
 
-import { IndexPageData } from "../data/indexPageData"
+import { IndexPageData } from "../utils/data/indexPageData"
 
 const IndexPage = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { NavbarDataButton, NavbarData } from "../../data/layoutData"
+import { NavbarDataButton, NavbarData } from "../../utils/data/layoutData"
 import { Link } from "gatsby"
 import {
     HeaderWrapper,

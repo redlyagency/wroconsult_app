@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { FooterData } from "../../data/layoutData"
+import { FooterData } from "../../utils/data/layoutData"
 
 const FooterWrapper = styled.footer`
     position: fixed;

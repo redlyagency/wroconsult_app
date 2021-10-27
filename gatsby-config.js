@@ -36,7 +36,7 @@ module.exports = {
         description: `Blisko 20-letnie doświadczenie doradców Wroconsult pozwala na skuteczną pomoc klientom z sektora publicznego i prywatnego.`,
         start_url: `/`,
         background_color: `#f7f0eb`,
-        theme_color: `#BF1E2D`,
+        theme_color: `#f7f0eb`,
         display: `standalone`,
         lang: `pl`,
       },
