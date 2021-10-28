@@ -98,7 +98,7 @@
 }
 /* 400 */
 @font-face {
-    font-family: 'Poppins-Regular';
+    font-family: 'Poppins-RegularItalic';
     src: local(Poppins-Regular),
     url("./Poppins-Regular.ttf") format("truetype");
     font-weight: 400;

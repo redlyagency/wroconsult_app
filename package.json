@@ -16,8 +16,11 @@
     "optimize": "svgo -f ./src/assets/svg && svgr -d ./src/assets/svg ./src/assets/svg"
   },
   "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "@mui/material": "^5.0.6",
     "@tippyjs/react": "^4.2.5",
     "babel-plugin-styled-components": "^1.13.3",
     "gatsby": "^3.14.3",
