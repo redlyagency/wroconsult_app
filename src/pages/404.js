@@ -8,7 +8,7 @@ import {
 
 import { Page404Data } from "../utils/data/layoutData"
 
-import MainBtn from "../components/Buttons/mainBtn"
+import MainBtn from "../components/buttons/mainBtn"
 
 class Page404 extends React.Component {
   render() {
