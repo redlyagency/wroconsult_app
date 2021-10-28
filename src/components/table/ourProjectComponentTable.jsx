@@ -6,16 +6,16 @@ function OurProjectComponentTable() {
     const data = React.useMemo(
     () => [
         {
-        col1: 'Hello',
-        col2: 'World',
+        col1: 'lorem',
+        col2: 'opsum',
         },
         {
-        col1: 'react-table',
-        col2: 'rocks',
+        col1: 'dolor',
+        col2: 'sit',
         },
         {
-        col1: 'whatever',
-        col2: 'you want',
+        col1: 'amet',
+        col2: 'lorem',
         },
     ],
     []
@@ -24,11 +24,11 @@ function OurProjectComponentTable() {
     const columns = React.useMemo(
     () => [
         {
-        Header: 'Column 1',
+        Header: 'lorem',
         accessor: 'col1', // accessor is the "key" in the data
         },
         {
-        Header: 'Column 2',
+        Header: 'lorem',
         accessor: 'col2',
         },
     ],
