@@ -10,6 +10,7 @@ import { CookieDataAlert, HelmetData } from "../../utils/data/layoutData"
 import { GlobalStyle } from "../../utils/theme/global.theme"
 
 import "../../fonts/fonts.css"
+import { CookieConsentWrapper } from "../../styles/index.style"
 
 const Layout = (props) => {
     return (
@@ -37,18 +38,20 @@ const Layout = (props) => {
                 </Helmet>
                 <Header />
                     {props.children}
-                <CookieConsent
-                    buttonText={ CookieDataAlert.AcceptBtn }
-                    cookieName="gatsby-gdpr-google-analytics"
-                    disableStyles="true"
-                    containerClasses="StyledContainerClasses"
-                    buttonClasses="StyledButtonClasses"
-                    contentClasses="StyledContentClasses"
-                >
-                    {CookieDataAlert.Content}
-                </CookieConsent>
+                <CookieConsentWrapper>
+                    <CookieConsent
+                        buttonText={ CookieDataAlert.AcceptBtn }
+                        cookieName="gatsby-gdpr-google-analytics"
+                        disableStyles="true"
+                        containerClasses="StyledContainerClasses"
+                        buttonClasses="StyledButtonClasses"
+                        contentClasses="StyledContentClasses"
+                    >
+                        {CookieDataAlert.Content}
+                    </CookieConsent>
+                </CookieConsentWrapper>
+                <Footer />
             </div>
-            <Footer />
         </>
     )
 }

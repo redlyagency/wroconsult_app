@@ -49,7 +49,7 @@ export const GlobalStyle = createGlobalStyle`
         width: 100vw;
         left: 0;
         position: fixed;
-        margin-bottom: 45px;
+        margin-bottom: 15px;
         padding: 15px 200px 15px 200px;
         display: flex;
         align-items: center;
