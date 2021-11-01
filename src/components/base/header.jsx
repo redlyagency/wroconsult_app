@@ -4,20 +4,20 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import {
     HeaderWrapper,
     Logo,
-    MobileButtonWrapper,
-    MobileButtonInner,
     NavbarWrapper,
     Ul,
     Li,
     RightSideButtonWrapper,
     RightSideButtonElement,
+    MobileMenuSectionBlank,
+    MobileMenuSection,
+    MobileButtonWrapper,
+    MobileButtonInner,
     MobileNavSection,
-    NavbarWrapperMobile,
     UlMobile,
     LiMobile,
     LinkMobile,
-    RightSideButtonWrapperMobile,
-    RightSideButtonElementMobile,
+    RightSideButtonElementMobile
 } from "../../styles/header.style"
 
 const Header = () => {
@@ -34,9 +34,6 @@ const Header = () => {
                 >
                     <Logo showNav={menu} />
                 </AniLink>
-                <MobileButtonWrapper showNav={menu} onClick={() => showMenu(!menu)}>
-                    <MobileButtonInner hamburger={menu} />
-                </MobileButtonWrapper>
                 {/* Navbar */}
                 <NavbarWrapper>
                     <Ul>
@@ -72,39 +69,56 @@ const Header = () => {
                     </RightSideButtonElement>
                 </RightSideButtonWrapper>
             </HeaderWrapper>
-            <MobileNavSection showNav={menu}>
-                {/* Navbar */}
-                <NavbarWrapperMobile>
-                    <UlMobile>
-                        {NavbarData.map((value, index) => {
-                            return (
-                                <LiMobile key={index}>
-                                    <LinkMobile
-                                        paintDrip
-                                        hex="#BF1E2D"
-                                        to={value.Link}
-                                        duration={0.5}
-                                        activeClassName="selected2"
-                                    >
-                                        {value.Title}
-                                    </LinkMobile>
-                                </LiMobile>
-                            )
-                        })}
-                    </UlMobile>
-                </NavbarWrapperMobile>
-                {/* Right side button */}
-                <RightSideButtonWrapperMobile>
-                    <RightSideButtonElementMobile
+            {/* Mobile menu section */}
+            <MobileMenuSectionBlank />
+            <MobileMenuSection showNav={menu}>
+                <AniLink 
+                    to="/"
+                    paintDrip
+                    hex="#BF1E2D"
+                    duration={0.5}
+                >
+                    <Logo
                         showNav={menu}
-                        paintDrip
-                        hex="#BF1E2D"
-                        duration={0.5}
-                        to={ NavbarDataButton.Link }
-                    >
-                        { NavbarDataButton.Title }
-                    </RightSideButtonElementMobile>
-                </RightSideButtonWrapperMobile>
+                        isMobile
+                    />
+                </AniLink>
+                <MobileButtonWrapper
+                    showNav={menu}
+                    onClick={() => showMenu(!menu)}
+                >
+                    <MobileButtonInner
+                        hamburger={menu}
+                    />
+                </MobileButtonWrapper>
+            </MobileMenuSection>
+            <MobileNavSection showNav={menu}>
+                <UlMobile>
+                    {NavbarData.map((value, index) => {
+                        return (
+                            <LiMobile key={index}>
+                                <LinkMobile
+                                    paintDrip
+                                    hex="#BF1E2D"
+                                    to={value.Link}
+                                    duration={0.5}
+                                    activeClassName="selected2"
+                                >
+                                    {value.Title}
+                                </LinkMobile>
+                            </LiMobile>
+                        )
+                    })}
+                </UlMobile>
+                <RightSideButtonElementMobile
+                    showNav={menu}
+                    paintDrip
+                    hex="#BF1E2D"
+                    duration={0.5}
+                    to={ NavbarDataButton.Link }
+                >
+                    { NavbarDataButton.Title }
+                </RightSideButtonElementMobile>
             </MobileNavSection>
         </>
     )
