@@ -50,7 +50,9 @@ const Header = () => {
                                         to={value.Link}
                                         activeClassName="selected"
                                     >
-                                        {value.Title}
+                                        <p style={{fontFamily: 'Poppins-Regular'}}>
+                                            {value.Title}
+                                        </p>
                                     </AniLink>
                                 </Li>
                             )
