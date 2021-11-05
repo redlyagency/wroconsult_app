@@ -11,9 +11,19 @@ export const GlobalStyle = createGlobalStyle`
     ::-webkit-scrollbar-thumb {background-color: #5D5D5D; border-radius: 999px; border: 2px #ffffff solid}
     ::-moz-selection { /* Code for Firefox */ color: #BF1E2D;background: #ffffff;}
     ::selection {color: #ffffff; background: #bf1e2e6c;}
+    html {
+        height: 100vh;
+        min-height: 100vh;
+    }
     body {
         margin: 0;
         padding: 0;
+        height: 100vh;
+        min-height: 100vh;
+    }
+    .tl-edges {
+        height: 100vh !important;
+        min-height: 100vh !important;
     }
     .selected {
         ::before {
