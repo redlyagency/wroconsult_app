@@ -13,28 +13,28 @@ export const NavbarData = [
     },
     {
         Title: 'Usługi',
-        Link: '/uslugi'
+        Link: '/uslugi/'
     },
     {
         Title: 'O nas',
-        Link: '/o-nas'
+        Link: '/o-nas/'
     },
     {
         Title: 'Nasi klienci',
-        Link: '/nasi-klienci'
+        Link: '/nasi-klienci/'
     },
     {
         Title: 'Nasze projekty',
-        Link: '/nasze-projekty'
+        Link: '/nasze-projekty/'
     },
     {
         Title: 'Aktualności',
-        Link: '/aktualnosci'
+        Link: '/aktualnosci/'
     }
 ]
 export const NavbarDataButton = {
     Title: 'Kontakt',
-    Link: '/kontakt'
+    Link: '/kontakt/'
 }
 export const CookieDataAlert = {
     Content: <p style={{ fontFamily: "Poppins-Regular" }}>Używamy plików cookie i podobnych technologii, które umożliwiają działanie usług i funkcjonalności w naszej witrynie oraz pomagają nam zrozumieć interakcje z naszymi usługami. Klikając przycisk Akceptuj, zgadzasz się na stosowanie przez nas tych technologii w celach marketingowych i analitycznych. Zobacz <Link to="/polityka-prywatnosci" style={{ color: "#F16F7B", textDecoration: "underline" }}>Politykę prywatności</Link></p>,
