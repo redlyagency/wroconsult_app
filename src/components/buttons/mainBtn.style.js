@@ -8,7 +8,7 @@ export const RightSideButtonElementMobile = styled(AniLink)`
     padding: 7px 25px 7px 25px;
     font-size: 20px;
     color: white;
-    font-family: 'Poppins-Regular';
+    font-family: 'Poppins';
     border-radius: 5px;
     border: 2px #BF1E2D solid;
     background-color: #BF1E2D;

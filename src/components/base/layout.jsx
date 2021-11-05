@@ -1,6 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import CookieConsent from 'react-cookie-consent';
+import CookieConsent from 'react-cookie-consent'
+import "@fontsource/poppins"
 
 import Header from "./header"
 import Footer from "./footer"
@@ -9,7 +10,6 @@ import { CookieDataAlert, HelmetData } from "../../utils/data/layoutData"
 
 import { GlobalStyle } from "../../utils/theme/global.theme"
 
-import "../../fonts/fonts.css"
 import { CookieConsentWrapper } from "../../styles/index.style"
 
 const Layout = (props) => {
