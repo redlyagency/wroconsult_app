@@ -5,15 +5,16 @@ import BgLine from "../assets/svg/bg_line.svg"
 export const PageWrapper = styled.div`
     background-image: url( ${ BgLine } );
     width: 100%;
-    height: 70vh;
     margin-top: 35px;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 65vh;
 
     @media (max-width: 1023px) {
-    margin-top: 20px;
+        margin-top: 20px;
+        height: 70vh;
     }
 `
 export const HeroContainer = styled.div`
@@ -113,4 +114,7 @@ export const SliderElement = styled.div`
         width: 200px;
         margin-left: 15px;
     }
+`
+export const CookieConsentWrapper = styled.div`
+    position: fixed;
 `

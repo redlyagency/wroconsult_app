@@ -6,14 +6,24 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Poppins';
     }
     #root {margin: 0;padding: 0;}
-    ::-webkit-scrollbar {width: 13px;} 
-    ::-webkit-scrollbar-track {background-color: #1C1C1C;}
-    ::-webkit-scrollbar-thumb {background-color: #5D5D5D; border-radius: 999px; border: 3px #1C1C1C solid}
+    ::-webkit-scrollbar {width: 10px;} 
+    ::-webkit-scrollbar-track {background-color: #ffffff;}
+    ::-webkit-scrollbar-thumb {background-color: #5D5D5D; border-radius: 999px; border: 2px #ffffff solid}
     ::-moz-selection { /* Code for Firefox */ color: #BF1E2D;background: #ffffff;}
     ::selection {color: #ffffff; background: #bf1e2e6c;}
+    html {
+        height: 100vh;
+        min-height: 100vh;
+    }
     body {
         margin: 0;
         padding: 0;
+        height: 100vh;
+        min-height: 100vh;
+    }
+    .tl-edges {
+        height: 100vh !important;
+        min-height: 100vh !important;
     }
     .selected {
         ::before {
@@ -49,7 +59,7 @@ export const GlobalStyle = createGlobalStyle`
         width: 100vw;
         left: 0;
         position: fixed;
-        margin-bottom: 45px;
+        margin-bottom: 15px;
         padding: 15px 200px 15px 200px;
         display: flex;
         align-items: center;

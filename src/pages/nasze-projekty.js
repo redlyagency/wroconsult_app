@@ -4,7 +4,7 @@ import Layout from "../components/base/layout"
 
 import {
   PageWrapper
-} from "../styles/nasiKlienci.style"
+} from "../styles/naszeProjekty.style"
 
 //import { NasiKlienciPageData } from "../utils/data/nasiKlienciPageData"
 import { Headers } from "../utils/data/headersData"

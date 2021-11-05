@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 export const HelmetData = {
-    Title: 'Wroconsult | studia wykonalności, restrukturyzacja, dofinansowanie',
+    Title: 'Wroconsult • studia wykonalności • restrukturyzacja • dofinansowanie',
     Description: 'Blisko 20-letnie doświadczenie doradców Wroconsult pozwala na skuteczną pomoc klientom z sektora publicznego i prywatnego.',
     WebsiteLink: 'https://www.wroconsult.pl'
 }
@@ -41,7 +41,7 @@ export const CookieDataAlert = {
     AcceptBtn: 'Akceptuj'
 }
 export const FooterData = {
-    Title: <p style={{textAlign: 'center'}}>&copy; {new Date().getFullYear()} - Wroconsult Sp. z o.o.</p>
+    Title: <p style={{textAlign: 'center', fontFamily: 'Poppins-Regular'}}>&copy; {new Date().getFullYear()} - Wroconsult Sp. z o.o.</p>
 }
 export const Page404Data = {
     Content: <p style={{fontFamily: 'Poppins-SemiBold', color: '#76777A', textAlign: 'center', fontSize: '60px', width: '60%', lineHeight: '75px'}}><span style={{color: '#BF1E2D', fontSize: '50px', fontFamily: 'Poppins-SemiBold'}}>404</span><br/>Strona której szukasz <span style={{color: '#BF1E2D', fontSize: '70px', fontFamily: 'Poppins-SemiBold'}}>nie istnieje</span></p>,

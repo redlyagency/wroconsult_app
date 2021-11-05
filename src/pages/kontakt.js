@@ -49,7 +49,11 @@ const NaszeProjektyPage = () => {
             </div>
           </div>
           <IframeGoogleMapsWrapper>
-            <IframeGoogleMaps src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d625.4509309718869!2d16.921812829261626!3d51.16740783965954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fead9e5c829ad%3A0xa2b62464772832dd!2sSiedlecka%2026%2C%2054-101%20Wroc%C5%82aw!5e0!3m2!1spl!2spl!4v1635447637061!5m2!1spl!2spl" allowfullscreen="" loading="lazy" />
+            <IframeGoogleMaps
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d625.4509309718869!2d16.921812829261626!3d51.16740783965954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fead9e5c829ad%3A0xa2b62464772832dd!2sSiedlecka%2026%2C%2054-101%20Wroc%C5%82aw!5e0!3m2!1spl!2spl!4v1635447637061!5m2!1spl!2spl"
+              allowfullscreen=""
+              loading="lazy"
+            />
           </IframeGoogleMapsWrapper>
         </div>
       </PageWrapper>
