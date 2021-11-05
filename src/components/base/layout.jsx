@@ -38,7 +38,11 @@ const Layout = (props) => {
                 </Helmet>
                 <Header />
                     {props.children}
-                <CookieConsentWrapper>
+                <CookieConsentWrapper
+                    style={{
+                        position: 'fixed'
+                    }}
+                >
                     <CookieConsent
                         buttonText={ CookieDataAlert.AcceptBtn }
                         cookieName="gatsby-gdpr-google-analytics"
