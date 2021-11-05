@@ -7,7 +7,8 @@ const H1Wrapper = styled.div`
 const H1 = styled.h1`
     font-size: 52px;
     color: #76777A;
-    font-family: 'Poppins-SemiBold';
+    font-family: 'Poppins';
+    font-weight: 600;
     line-height: 57px;
 
     @media (max-width: 1023px) {

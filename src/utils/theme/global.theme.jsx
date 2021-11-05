@@ -20,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         height: 100vh;
         min-height: 100vh;
+        font-family: "Poppins";
     }
     .tl-edges {
         height: 100vh !important;
@@ -80,7 +81,7 @@ export const GlobalStyle = createGlobalStyle`
         background-color: #BF1E2D;
         font-size: 15px;
         color: white;
-        font-family: 'Poppins-Regular';
+        font-family: 'Poppins';
         padding: 7px 15px 7px 15px;
         border-radius: 5px;
         margin-left: 20px;

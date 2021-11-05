@@ -4,8 +4,6 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import LogoSVG from "../assets/svg/logo.svg"
 import BgLine from "../assets/svg/bg_line.svg"
 
-import "../fonts/fonts.css"
-
 export const HeaderWrapper = styled.header`
     margin-top: 50px;
     height: 75px;
@@ -56,7 +54,7 @@ export const Li = styled.li`
     color: #76777A;
     font-size: 16px;
     text-align: center;
-    font-family: 'Poppins-Regular';
+    font-family: 'Poppins';
 
     :not(:first-child) {
         margin-left: 30px;
@@ -99,7 +97,7 @@ export const RightSideButtonElement = styled(AniLink)`
     border: 2px solid #BF1E2D;
     border-radius: 5px;
     color: white;
-    font-family: 'Poppins-Regular';
+    font-family: 'Poppins';
     font-size: 14px;
     transition: 0.2s;
 
@@ -240,7 +238,8 @@ export const LiMobile = styled.li`
 `
 export const LinkMobile = styled(AniLink)`
     font-size: 30px;
-    font-family: 'Poppins-SemiBold';
+    font-family: 'Poppins';
+    font-weight: 600;
     color: #76777A;
     position: relative;
 `
@@ -248,7 +247,7 @@ export const RightSideButtonElementMobile = styled(AniLink)`
     padding: 7px 110px 7px 110px;
     font-size: 20px;
     color: white;
-    font-family: 'Poppins-Regular';
+    font-family: 'Poppins';
     border-radius: 5px;
     border: 2px #BF1E2D solid;
     background-color: #BF1E2D;

@@ -12,7 +12,7 @@ const P1Wrapper = styled.div`
 const P1 = styled.p`
     font-size: 15px;
     color: #76777A;
-    font-family: 'Poppins-Regular';
+    font-family: 'Poppins';
     line-height: 20px;
 `
 

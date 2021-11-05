@@ -12,7 +12,8 @@ const H2Wrapper = styled.div`
 const H2 = styled.h1`
     font-size: 20px;
     color: #BF1E2D;
-    font-family: 'Poppins-Medium';
+    font-family: 'Poppins';
+    font-weight: 600;
     line-height: 25px;
 `
 
