@@ -10,9 +10,11 @@ export const PageWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 65vh;
 
     @media (max-width: 1023px) {
         margin-top: 20px;
+        height: 70vh;
     }
 `
 export const HeroContainer = styled.div`

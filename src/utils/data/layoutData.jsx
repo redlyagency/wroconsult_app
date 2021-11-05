@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 export const HelmetData = {
-    Title: 'Wroconsult | studia wykonalności, restrukturyzacja, dofinansowanie',
+    Title: 'Wroconsult • studia wykonalności • restrukturyzacja • dofinansowanie',
     Description: 'Blisko 20-letnie doświadczenie doradców Wroconsult pozwala na skuteczną pomoc klientom z sektora publicznego i prywatnego.',
     WebsiteLink: 'https://www.wroconsult.pl'
 }
