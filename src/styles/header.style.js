@@ -128,7 +128,7 @@ export const MobileMenuSection = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 99;
+    z-index: 999999999;
 
     @media (min-width: 1023px) {
         display: none;

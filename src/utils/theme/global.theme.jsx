@@ -22,9 +22,12 @@ export const GlobalStyle = createGlobalStyle`
         min-height: 100vh;
         font-family: "Poppins";
     }
-    .tl-edges {
+    .tl-edges, .tl-wrapper, .tl-wrapper--mount, .tl-wrapper-status--entered {
         height: 100vh !important;
         min-height: 100vh !important;
+    }
+    .tl-wrapper {
+        transform: none !important;
     }
     .selected {
         ::before {
@@ -108,5 +111,9 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 13px;
         color: #515254;
     }
-
+    .hoveredBtn {
+        :hover {
+            color: #515254 !important;
+        }
+    }
 `
