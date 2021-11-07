@@ -1,93 +1,150 @@
 import React from "react"
-import { useTable } from 'react-table'
+import {
+    OurProjectComponentTableWrapper,
+    TableStyled,
+    TheadStyled,
+    TheadStyledText,
+    TbodyStyled,
+    TrStyled,
+    ThStyled,
+    TdStyled,
+} from './ourProjectComponentTable.style'
 
-function OurProjectComponentTable() {
-    const data = React.useMemo(
-    () => [
-        {
-        col1: 'lorem',
-        col2: 'opsum',
-        },
-        {
-        col1: 'dolor',
-        col2: 'sit',
-        },
-        {
-        col1: 'amet',
-        col2: 'lorem',
-        },
-    ],
-    []
-    )
-
-    const columns = React.useMemo(
-    () => [
-        {
-        Header: 'lorem',
-        accessor: 'col1', // accessor is the "key" in the data
-        },
-        {
-        Header: 'lorem',
-        accessor: 'col2',
-        },
-    ],
-    []
-    )
-
-    const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow,
-    } = useTable({ columns, data })
-
-    return (
-    <table {...getTableProps()} style={{ border: 'solid 1px blue' }}>
-        <thead>
-        {headerGroups.map(headerGroup => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
-            {headerGroup.headers.map(column => (
-                <th
-                {...column.getHeaderProps()}
-                style={{
-                    borderBottom: 'solid 3px red',
-                    background: 'aliceblue',
-                    color: 'black',
-                    fontWeight: 'bold',
-                }}
-                >
-                {column.render('Header')}
-                </th>
-            ))}
-            </tr>
-        ))}
-        </thead>
-        <tbody {...getTableBodyProps()}>
-        {rows.map(row => {
-            prepareRow(row)
-            return (
-            <tr {...row.getRowProps()}>
-                {row.cells.map(cell => {
-                return (
-                    <td
-                    {...cell.getCellProps()}
-                    style={{
-                        padding: '10px',
-                        border: 'solid 1px gray',
-                        background: 'papayawhip',
-                    }}
-                    >
-                    {cell.render('Cell')}
-                    </td>
-                )
-                })}
-            </tr>
-            )
-        })}
-        </tbody>
-    </table>
-    )
+class OurProjectComponentTable extends React.Component {
+    render() {
+        return (
+            <OurProjectComponentTableWrapper>
+                <TableStyled>
+                    <TheadStyled>
+                        <TrStyled>
+                            <ThStyled>
+                                <TheadStyledText>Nazwa projektu</TheadStyledText>
+                            </ThStyled>
+                            <ThStyled>
+                                <TheadStyledText>Odbiorca</TheadStyledText>
+                            </ThStyled>
+                            <ThStyled isRed>
+                                <TheadStyledText isRed>Wartość projektu</TheadStyledText>
+                            </ThStyled>
+                            <ThStyled>
+                                <TheadStyledText>Źródło finansowania</TheadStyledText>
+                            </ThStyled>
+                        </TrStyled>
+                    </TheadStyled>
+                    <TbodyStyled>
+                        <TrStyled>
+                            <TdStyled>Odtworzenie infrastruktury do diagnostyki i terapii chorób układu oddechowego CO-I, poprzez wymianę wyrobów medycznych.</TdStyled>
+                            <TdStyled>Centrum Onkologii-Instytut im. Marii Skłodowskiej – Curie</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Dofinansowanie zakupu sprzętu medycznego dla Szpitalnego Oddziału Ratunkowego w Głogowskim Szpitalu Powiatowym Sp. z o. o.</TdStyled>
+                            <TdStyled>Głogowski Szpital Powiatowy Sp. z o. o.</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Odtworzenie infrastruktury do diagnostyki i terapii chorób układu oddechowego CO-I, poprzez wymianę wyrobów medycznych.</TdStyled>
+                            <TdStyled>Centrum Onkologii-Instytut im. Marii Skłodowskiej – Curie</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Dofinansowanie zakupu sprzętu medycznego dla Szpitalnego Oddziału Ratunkowego w Głogowskim Szpitalu Powiatowym Sp. z o. o.</TdStyled>
+                            <TdStyled>Głogowski Szpital Powiatowy Sp. z o. o.</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Odtworzenie infrastruktury do diagnostyki i terapii chorób układu oddechowego CO-I, poprzez wymianę wyrobów medycznych.</TdStyled>
+                            <TdStyled>Centrum Onkologii-Instytut im. Marii Skłodowskiej – Curie</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Dofinansowanie zakupu sprzętu medycznego dla Szpitalnego Oddziału Ratunkowego w Głogowskim Szpitalu Powiatowym Sp. z o. o.</TdStyled>
+                            <TdStyled>Głogowski Szpital Powiatowy Sp. z o. o.</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Odtworzenie infrastruktury do diagnostyki i terapii chorób układu oddechowego CO-I, poprzez wymianę wyrobów medycznych.</TdStyled>
+                            <TdStyled>Centrum Onkologii-Instytut im. Marii Skłodowskiej – Curie</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Dofinansowanie zakupu sprzętu medycznego dla Szpitalnego Oddziału Ratunkowego w Głogowskim Szpitalu Powiatowym Sp. z o. o.</TdStyled>
+                            <TdStyled>Głogowski Szpital Powiatowy Sp. z o. o.</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Odtworzenie infrastruktury do diagnostyki i terapii chorób układu oddechowego CO-I, poprzez wymianę wyrobów medycznych.</TdStyled>
+                            <TdStyled>Centrum Onkologii-Instytut im. Marii Skłodowskiej – Curie</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Dofinansowanie zakupu sprzętu medycznego dla Szpitalnego Oddziału Ratunkowego w Głogowskim Szpitalu Powiatowym Sp. z o. o.</TdStyled>
+                            <TdStyled>Głogowski Szpital Powiatowy Sp. z o. o.</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Odtworzenie infrastruktury do diagnostyki i terapii chorób układu oddechowego CO-I, poprzez wymianę wyrobów medycznych.</TdStyled>
+                            <TdStyled>Centrum Onkologii-Instytut im. Marii Skłodowskiej – Curie</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Dofinansowanie zakupu sprzętu medycznego dla Szpitalnego Oddziału Ratunkowego w Głogowskim Szpitalu Powiatowym Sp. z o. o.</TdStyled>
+                            <TdStyled>Głogowski Szpital Powiatowy Sp. z o. o.</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Odtworzenie infrastruktury do diagnostyki i terapii chorób układu oddechowego CO-I, poprzez wymianę wyrobów medycznych.</TdStyled>
+                            <TdStyled>Centrum Onkologii-Instytut im. Marii Skłodowskiej – Curie</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Dofinansowanie zakupu sprzętu medycznego dla Szpitalnego Oddziału Ratunkowego w Głogowskim Szpitalu Powiatowym Sp. z o. o.</TdStyled>
+                            <TdStyled>Głogowski Szpital Powiatowy Sp. z o. o.</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Odtworzenie infrastruktury do diagnostyki i terapii chorób układu oddechowego CO-I, poprzez wymianę wyrobów medycznych.</TdStyled>
+                            <TdStyled>Centrum Onkologii-Instytut im. Marii Skłodowskiej – Curie</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Dofinansowanie zakupu sprzętu medycznego dla Szpitalnego Oddziału Ratunkowego w Głogowskim Szpitalu Powiatowym Sp. z o. o.</TdStyled>
+                            <TdStyled>Głogowski Szpital Powiatowy Sp. z o. o.</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Odtworzenie infrastruktury do diagnostyki i terapii chorób układu oddechowego CO-I, poprzez wymianę wyrobów medycznych.</TdStyled>
+                            <TdStyled>Centrum Onkologii-Instytut im. Marii Skłodowskiej – Curie</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                        <TrStyled>
+                            <TdStyled>Dofinansowanie zakupu sprzętu medycznego dla Szpitalnego Oddziału Ratunkowego w Głogowskim Szpitalu Powiatowym Sp. z o. o.</TdStyled>
+                            <TdStyled>Głogowski Szpital Powiatowy Sp. z o. o.</TdStyled>
+                            <TdStyled isRed>6 916 469,36 PLN</TdStyled>
+                            <TdStyled>POIiŚ 2014-2020</TdStyled>
+                        </TrStyled>
+                    </TbodyStyled>
+                </TableStyled>
+            </OurProjectComponentTableWrapper>
+        )
+    }
 }
 
-    export default OurProjectComponentTable
+export default OurProjectComponentTable
