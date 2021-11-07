@@ -115,6 +115,3 @@ export const SliderElement = styled.div`
         margin-left: 15px;
     }
 `
-export const CookieConsentWrapper = styled.div`
-    position: fixed;
-`

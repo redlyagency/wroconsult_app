@@ -11,8 +11,6 @@ import { CookieDataAlert, HelmetData } from "../../utils/data/layoutData"
 
 import { GlobalStyle } from "../../utils/theme/global.theme"
 
-import { CookieConsentWrapper } from "../../styles/index.style"
-
 const Preloader = styled.div`
     background-color: #BF1E2D;
     position: fixed;
@@ -98,6 +96,12 @@ const PreloaderSymbol = styled.div`
     }
 `
 
+const CookieConsentWrapper = styled.div`
+    bottom: 0 !important;
+    position: fixed !important;
+    z-index: 9999 !important;
+`
+
 const Layout = (props, { children }) => {
     const [loader, setLoader]=useState(true);
 
@@ -110,6 +114,23 @@ const Layout = (props, { children }) => {
     return (
         <>
             <div className="container">
+                <CookieConsentWrapper
+                        style={{
+                            position: 'fixed',
+                            bottom: '0',
+                        }}
+                >
+                    <CookieConsent
+                        buttonText={ CookieDataAlert.AcceptBtn }
+                        cookieName="gatsby-gdpr-google-analytics"
+                        disableStyles="true"
+                        containerClasses="StyledContainerClasses"
+                        buttonClasses="StyledButtonClasses"
+                        contentClasses="StyledContentClasses"
+                    >
+                        {CookieDataAlert.Content}
+                    </CookieConsent>
+                </CookieConsentWrapper>
                 <GlobalStyle />
                 <Helmet
                     htmlAttributes={{
@@ -137,22 +158,6 @@ const Layout = (props, { children }) => {
                             <PreloaderSymbol />
                         </Preloader>
                     :  children}
-                <CookieConsentWrapper
-                    style={{
-                        position: 'fixed'
-                    }}
-                >
-                    <CookieConsent
-                        buttonText={ CookieDataAlert.AcceptBtn }
-                        cookieName="gatsby-gdpr-google-analytics"
-                        disableStyles="true"
-                        containerClasses="StyledContainerClasses"
-                        buttonClasses="StyledButtonClasses"
-                        contentClasses="StyledContentClasses"
-                    >
-                        {CookieDataAlert.Content}
-                    </CookieConsent>
-                </CookieConsentWrapper>
                 <Footer />
             </div>
         </>
