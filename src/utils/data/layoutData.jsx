@@ -44,7 +44,7 @@ export const FooterData = {
     Title: <p style={{textAlign: 'center', fontFamily: 'Poppins'}}>&copy; {new Date().getFullYear()} - Wroconsult Sp. z o.o.</p>
 }
 export const Page404Data = {
-    Content: <p style={{fontFamily: 'Poppins', fontWeight: '600', color: '#76777A', textAlign: 'center', fontSize: '60px', width: '60%', lineHeight: '75px'}}><span style={{color: '#BF1E2D', fontSize: '50px', fontFamily: 'Poppins', fontWeight: '600'}}>404</span><br/>Strona której szukasz <span style={{color: '#BF1E2D', fontSize: '70px', fontFamily: 'Poppins', fontWeight: '600'}}>nie istnieje</span></p>,
+    Content: <p><span style={{color: '#BF1E2D'}}>404</span><br/>Strona której szukasz <span style={{color: '#BF1E2D'}}>nie istnieje</span></p>,
     BtnTitle: 'Powrót na stronę główną',
     BtnLink: '/'
 } 
