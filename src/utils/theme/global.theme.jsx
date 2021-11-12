@@ -116,4 +116,13 @@ export const GlobalStyle = createGlobalStyle`
             color: #515254 !important;
         }
     }
+
+    #tsparticles > canvas {
+        width: 750px !important;
+        height: 100vh !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+    }
+
 `

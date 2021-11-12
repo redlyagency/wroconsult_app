@@ -4,6 +4,7 @@ import Layout from "../components/base/layout"
 
 import {
   PageWrapper,
+  Page404Paragraph,
 } from "../styles/404.style"
 
 import { Page404Data } from "../utils/data/layoutData"
@@ -15,7 +16,9 @@ class Page404 extends React.Component {
     return (
       <Layout>
         <PageWrapper>
-          {Page404Data.Content}
+          <Page404Paragraph>
+            {Page404Data.Content}
+          </Page404Paragraph>
           <MainBtn
             name={Page404Data.BtnTitle}
             link={Page404Data.BtnLink}

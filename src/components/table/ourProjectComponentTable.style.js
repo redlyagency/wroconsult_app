@@ -51,7 +51,7 @@ export const TrStyled = styled.tr`
     }
     
     @media (max-width: 500px) {
-        font-size: 12px;
+        font-size: 14px;
     }
 `
 export const ThStyled = styled.th`
@@ -65,7 +65,7 @@ export const ThStyled = styled.th`
 export const TdStyled = styled.td`
     background-color: ${({isRed}) => isRed ? 'rgba(190, 30, 46, 0.1)' : 'transparent'};
     color: ${({isRed}) => isRed ? '#BF1E2D' : '#76777A'};
-    padding: 20px;
+    padding: 25px;
     text-align: center;
 
     @media (max-width: 1023px) {
@@ -96,7 +96,7 @@ export const TdStyled = styled.td`
         display: block;
         border: none;
         position: relative;
-        padding-left: 50%;
+        padding-top: 50px;
         text-align: left;
     }
 

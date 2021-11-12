@@ -10,7 +10,7 @@ export const HeaderWrapper = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FFFFFFD9;
+    background-color: ${({ isIndexPage }) => isIndexPage ? 'transparent' : '#FFFFFFD9'};
     position: sticky;
     top: 50px;
     z-index: 999;

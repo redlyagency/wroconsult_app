@@ -1,117 +1,115 @@
 import styled from "styled-components"
 
 import BgLine from "../assets/svg/bg_line.svg"
+import bgImage from "../assets/img/heroBgImage.png"
 
 export const PageWrapper = styled.div`
-    background-image: url( ${ BgLine } );
-    width: 100%;
-    margin-top: 35px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 65vh;
-
-    @media (max-width: 1023px) {
-        margin-top: 20px;
-        height: 70vh;
-    }
-`
-export const HeroContainer = styled.div`
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-`
-export const StyledMainHeaderHero = styled.div`
-    line-height: 75px;
-    font-size: 70px;
-
-    @media (max-width: 1535px) {
-    line-height: 70px;
-    font-size: 65px;
-    }
-    @media (max-width: 1279px) {
-    line-height: 65px;
-    font-size: 60px;
-    }
-    @media (max-width: 767px) {
-    line-height: 55px;
-    font-size: 50px;
-    }
-    @media (max-width: 600px) {
-    line-height: 50px;
-    font-size: 45px;
-    }
-    @media (max-width: 500px) {
-    line-height: 45px;
-    font-size: 40px;
-    }
-    @media (max-width: 450px) {
-    line-height: 35px;
-    font-size: 30px;
-    }
-    @media (max-width: 350px) {
-    line-height: 30px;
-    font-size: 25px;
-    }
-`
-export const StyledUnderMainHeaderHero = styled.div`
-    text-align: right;
-    font-size: 20px;
-    width: 90%;
-    float: right;
-    padding: 5px 0 15px 0;
-
-    @media (max-width: 1535px) {
-    font-size: 17.5px;
-    }
-    @media (max-width: 1279px) {
-    font-size: 17px;
-    }
-    @media (max-width: 600px) {
-    font-size: 12px;
-    }
-    @media (max-width: 500px) {
-    font-size: 11px;
-    }
-`
-export const StyledMarkSliderContainer = styled.div`
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
 
     @media (max-width: 1023px) {
         flex-direction: column;
-        align-items: flex-start;
     }
 `
-export const SliderElement = styled.div`
-    width: 700px;
-    height: 100px;
-    margin-left: 15px;
-    z-index: 1;
+export const LeftSide = styled.div`
+    background-image: url( ${ BgLine } );
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-    @media (max-width: 1279px) {
-        width: 600px;
-    }
     @media (max-width: 1023px) {
-        width: 500px;
+        align-items: baseline;
+        justify-content: end;
+        margin-bottom: 25px;
+        width: 100vw;
     }
-    @media (max-width: 767px) {
-        width: 400px;
+`
+export const RightSide = styled.div`
+    background-image: url( ${ bgImage } );
+    background-size: cover;
+    opacity: 0.25;
+    width: 40vw;
+    height: 100vh;
+
+    @media (max-width: 1023px) {
+        width: 100vw;
+        height: 50vh;
     }
-    @media (max-width: 600px) {
-        width: 350px;
+`
+export const StyledMainHeaderHero = styled.h1`
+    text-align: right;
+    font-size: 65px;
+    line-height: 60px;
+
+    @media (min-width: 1850px) {
+        font-size: 75px;
+        line-height: 75px;
     }
-    @media (max-width: 500px) {
-        width: 300px;
+    @media (max-width: 700px) {
+        font-size: 55px;
+        line-height: 50px;
     }
-    @media (max-width: 450px) {
-        width: 250px;
-        margin-left: 0;
+    @media (max-width: 550px) {
+        font-size: 45px;
+        line-height: 40px;
     }
-    @media (max-width: 350px) {
-        width: 200px;
-        margin-left: 15px;
+    @media (max-width: 420px) {
+        font-size: 40px;
+        line-height: 35px;
     }
+    @media (max-width: 360px) {
+        font-size: 34px;
+        line-height: 32px;
+    }
+`
+export const StyledUnderMainHeaderHero = styled.h2`
+    text-align: right;
+    font-size: 17px;
+    line-height: 20px;
+    width: 70%;
+
+    @media (min-width: 1850px) {
+        font-size: 20px;
+        line-height: 25px;
+        width: 800px;
+    }
+    @media (max-width: 550px) {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    @media (max-width: 420px) {
+        font-size: 13px;
+        line-height: 15px;
+    }
+    @media (max-width: 360px) {
+        font-size: 12px;
+        line-height: 13px;
+    }
+`
+export const HeaderWrapper = styled.div`
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 95%;
+`
+export const FooterWrapper = styled.footer`
+    color: #76777A;
+    width: 100%;
+    padding: 25px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 `

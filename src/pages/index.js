@@ -1,38 +1,44 @@
 import * as React from "react"
 
 import Layout from "../components/base/layout"
-import Slider from "../components/swiper/swiper"
 
 import {
   PageWrapper,
   HeroContainer,
   StyledMainHeaderHero,
   StyledUnderMainHeaderHero,
-  StyledMarkSliderContainer,
-  SliderElement,
+  ImageHeroRightSideComponentWrapper,
+  ImageHeroRightSideComponentIMAGEWRAPPER,
+  ImageHeroRightSideComponent,
+  HeaderWrapper,
+  FooterWrapper,
+  LeftSide,
+  RightSide,
 } from "../styles/index.style"
 
 import { IndexPageData } from "../utils/data/indexPageData"
+import { FooterData } from "../utils/data/layoutData"
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout isIndexPage>
+      <div style={{height: '70vh'}}/>
       <PageWrapper>
-        <HeroContainer>
-          <StyledMainHeaderHero>
-            { IndexPageData.MainHeaderHero }
-          </StyledMainHeaderHero>
-          <StyledUnderMainHeaderHero>
-            { IndexPageData.UnderMainHeaderHero }
-          </StyledUnderMainHeaderHero>
-          <StyledMarkSliderContainer>
-            { IndexPageData.MarkSliderTitle }
-            <SliderElement>
-              <Slider />
-            </SliderElement>
-          </StyledMarkSliderContainer>
-        </HeroContainer>
+        <LeftSide>
+          <HeaderWrapper>
+            <StyledMainHeaderHero>
+              { IndexPageData.MainHeaderHero }
+            </StyledMainHeaderHero>
+            <StyledUnderMainHeaderHero>
+              { IndexPageData.UnderMainHeaderHero }
+            </StyledUnderMainHeaderHero>
+          </HeaderWrapper>
+        </LeftSide>
+        <RightSide />
       </PageWrapper>
+      <FooterWrapper>
+          { FooterData.Title }
+      </FooterWrapper>
     </Layout>
   )
 }

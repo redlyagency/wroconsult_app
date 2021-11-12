@@ -17,3 +17,22 @@ export const PageWrapper = styled.div`
     margin-top: 20px;
     }
 `
+export const Page404Paragraph = styled.p`
+    font-size: 60px !important;
+    font-family: Poppins;
+    font-weight: 600;
+    color: #76777A;
+    text-align: center;
+    font-size: 60px;
+    width: 60%;
+    line-height: 75px;
+
+    @media (max-width: 1023px) {
+        font-size: 40px !important;
+        line-height: 55px;
+    }
+    @media (max-width: 500px) {
+        font-size: 30px !important;
+        line-height: 45px;
+    }
+`

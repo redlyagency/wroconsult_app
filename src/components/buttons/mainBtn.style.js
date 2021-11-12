@@ -18,4 +18,8 @@ export const RightSideButtonElementMobile = styled(AniLink)`
         background-color: transparent;
         color: #BF1E2D;
     }
+
+    @media (max-width: 1023px) {
+        font-size: 15px;
+    }
 `
