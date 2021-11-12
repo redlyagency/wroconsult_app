@@ -4,95 +4,112 @@ import BgLine from "../assets/svg/bg_line.svg"
 import bgImage from "../assets/img/heroBgImage.png"
 
 export const PageWrapper = styled.div`
-    width: 100%;
-    margin-top: 35px;
-    padding: 20px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 65vh;
 
     @media (max-width: 1023px) {
-        margin-top: 20px;
-        height: 70vh;
+        flex-direction: column;
     }
 `
-export const HeroContainer = styled.div`
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+export const LeftSide = styled.div`
     background-image: url( ${ BgLine } );
-`
-export const StyledMainHeaderHero = styled.div`
-    text-align: right;
-    line-height: 80px;
-    font-size: 80px;
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-    @media (max-width: 1535px) {
-    line-height: 70px;
-    font-size: 65px;
-    }
-    @media (max-width: 1279px) {
-    line-height: 65px;
-    font-size: 60px;
-    }
-    @media (max-width: 767px) {
-    line-height: 55px;
-    font-size: 50px;
-    }
-    @media (max-width: 600px) {
-    line-height: 50px;
-    font-size: 45px;
-    }
-    @media (max-width: 500px) {
-    line-height: 45px;
-    font-size: 40px;
-    }
-    @media (max-width: 450px) {
-    line-height: 35px;
-    font-size: 30px;
-    }
-    @media (max-width: 350px) {
-    line-height: 30px;
-    font-size: 25px;
+    @media (max-width: 1023px) {
+        align-items: baseline;
+        justify-content: end;
+        margin-bottom: 25px;
+        width: 100vw;
     }
 `
-export const StyledUnderMainHeaderHero = styled.div`
-    text-align: right;
-    font-size: 20px;
-    padding: 5px 0 15px 0;
-
-    @media (max-width: 1535px) {
-    font-size: 17.5px;
-    }
-    @media (max-width: 1279px) {
-    font-size: 17px;
-    }
-    @media (max-width: 600px) {
-    font-size: 12px;
-    }
-    @media (max-width: 500px) {
-    font-size: 11px;
-    }
-`
-export const ImageHeroRightSideComponentWrapper = styled.div`
-    width: 35%;
-    height: 99vh;
-    margin-left: 50px;
-    background-color: white;
-`
-export const ImageHeroRightSideComponentIMAGEWRAPPER = styled.div`
-    position: absolute;
-    height: 100%;
-    width: 40vw;
-    top: 0;
-    right: 0;
-`
-export const ImageHeroRightSideComponent = styled.div`
+export const RightSide = styled.div`
     background-image: url( ${ bgImage } );
     background-size: cover;
-    background-position: right;
-    opacity: 0.2;
-    height: 100%;
-    height: 100%;
+    opacity: 0.25;
+    width: 40vw;
+    height: 100vh;
+
+    @media (max-width: 1023px) {
+        width: 100vw;
+        height: 50vh;
+    }
+`
+export const StyledMainHeaderHero = styled.h1`
+    text-align: right;
+    font-size: 65px;
+    line-height: 60px;
+
+    @media (min-width: 1850px) {
+        font-size: 75px;
+        line-height: 75px;
+    }
+    @media (max-width: 700px) {
+        font-size: 55px;
+        line-height: 50px;
+    }
+    @media (max-width: 550px) {
+        font-size: 45px;
+        line-height: 40px;
+    }
+    @media (max-width: 420px) {
+        font-size: 40px;
+        line-height: 35px;
+    }
+    @media (max-width: 360px) {
+        font-size: 34px;
+        line-height: 32px;
+    }
+`
+export const StyledUnderMainHeaderHero = styled.h2`
+    text-align: right;
+    font-size: 17px;
+    line-height: 20px;
+    width: 70%;
+
+    @media (min-width: 1850px) {
+        font-size: 20px;
+        line-height: 25px;
+        width: 800px;
+    }
+    @media (max-width: 550px) {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    @media (max-width: 420px) {
+        font-size: 13px;
+        line-height: 15px;
+    }
+    @media (max-width: 360px) {
+        font-size: 12px;
+        line-height: 13px;
+    }
+`
+export const HeaderWrapper = styled.div`
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 95%;
+`
+export const FooterWrapper = styled.footer`
+    color: #76777A;
+    width: 100%;
+    padding: 25px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 `

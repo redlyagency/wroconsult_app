@@ -7,13 +7,14 @@ const FooterWrapper = styled.footer`
     color: #76777A;
     width: 100%;
     padding: 25px;
+    display: ${({ isIndexPage }) => isIndexPage ? 'none' : 'block'};
 `
 
 class Footer extends React.Component {
     render() {
         return (
             <>
-                <FooterWrapper>
+                <FooterWrapper isIndexPage={ this.props.isIndexPage }>
                     { FooterData.Title }
                 </FooterWrapper>
             </>

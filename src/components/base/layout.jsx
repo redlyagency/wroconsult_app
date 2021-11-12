@@ -158,7 +158,7 @@ const Layout = (props, { children }) => {
                             <PreloaderSymbol />
                         </Preloader>
                     :  children}
-                <Footer />
+                <Footer isIndexPage={ props.isIndexPage }/>
             </div>
         </>
     )

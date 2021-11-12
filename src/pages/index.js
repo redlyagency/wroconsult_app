@@ -10,28 +10,35 @@ import {
   ImageHeroRightSideComponentWrapper,
   ImageHeroRightSideComponentIMAGEWRAPPER,
   ImageHeroRightSideComponent,
+  HeaderWrapper,
+  FooterWrapper,
+  LeftSide,
+  RightSide,
 } from "../styles/index.style"
 
 import { IndexPageData } from "../utils/data/indexPageData"
+import { FooterData } from "../utils/data/layoutData"
 
 const IndexPage = () => {
   return (
     <Layout isIndexPage>
+      <div style={{height: '70vh'}}/>
       <PageWrapper>
-        <HeroContainer>
-          <StyledMainHeaderHero>
-            { IndexPageData.MainHeaderHero }
-          </StyledMainHeaderHero>
-          <StyledUnderMainHeaderHero>
-            { IndexPageData.UnderMainHeaderHero }
-          </StyledUnderMainHeaderHero>
-        </HeroContainer>
-        <ImageHeroRightSideComponentWrapper>
-          <ImageHeroRightSideComponentIMAGEWRAPPER>
-            <ImageHeroRightSideComponent/>
-          </ImageHeroRightSideComponentIMAGEWRAPPER>
-        </ImageHeroRightSideComponentWrapper>
+        <LeftSide>
+          <HeaderWrapper>
+            <StyledMainHeaderHero>
+              { IndexPageData.MainHeaderHero }
+            </StyledMainHeaderHero>
+            <StyledUnderMainHeaderHero>
+              { IndexPageData.UnderMainHeaderHero }
+            </StyledUnderMainHeaderHero>
+          </HeaderWrapper>
+        </LeftSide>
+        <RightSide />
       </PageWrapper>
+      <FooterWrapper>
+          { FooterData.Title }
+      </FooterWrapper>
     </Layout>
   )
 }
