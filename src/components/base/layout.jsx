@@ -151,7 +151,7 @@ const Layout = (props, { children }) => {
                         rel="canonical" href={ HelmetData.WebsiteLink }
                     />
                 </Helmet>
-                <Header />
+                <Header isIndexPage={ props.isIndexPage } />
                     {props.children}
                     {loader ?
                         <Preloader>

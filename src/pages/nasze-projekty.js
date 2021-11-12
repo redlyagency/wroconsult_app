@@ -19,7 +19,9 @@ const NaszeProjektyPage = () => {
         <H1
           name={ Headers.NaszeProjekty }
         />
-        <OurProjectComponentTable />
+        <div style={{padding: '0 25px 0 25px'}}>
+          <OurProjectComponentTable />
+        </div>
       </PageWrapper>
     </Layout>
   )

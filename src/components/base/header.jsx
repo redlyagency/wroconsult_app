@@ -20,12 +20,12 @@ import {
     RightSideButtonElementMobile
 } from "../../styles/header.style"
 
-const Header = () => {
+const Header = (props) => {
     const[menu, showMenu] = useState(false)
 
     return (
         <>
-            <HeaderWrapper showNav={menu}>
+            <HeaderWrapper showNav={menu} isIndexPage={ props.isIndexPage }>
                 <AniLink 
                     to="/"
                     paintDrip

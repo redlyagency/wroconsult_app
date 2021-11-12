@@ -22,7 +22,6 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@mui/material": "^5.0.6",
-    "@tippyjs/react": "^4.2.5",
     "babel-plugin-styled-components": "^1.13.3",
     "gatsby": "^3.14.3",
     "gatsby-plugin-gdpr-cookies": "^2.0.8",
@@ -42,8 +41,7 @@
     "react-cookie-consent": "^6.4.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.3.3",
-    "swiper": "^7.0.9"
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@svgr/cli": "^5.5.0",

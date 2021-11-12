@@ -1,22 +1,22 @@
 import * as React from "react"
 
 import Layout from "../components/base/layout"
-import Slider from "../components/swiper/swiper"
 
 import {
   PageWrapper,
   HeroContainer,
   StyledMainHeaderHero,
   StyledUnderMainHeaderHero,
-  StyledMarkSliderContainer,
-  SliderElement,
+  ImageHeroRightSideComponentWrapper,
+  ImageHeroRightSideComponentIMAGEWRAPPER,
+  ImageHeroRightSideComponent,
 } from "../styles/index.style"
 
 import { IndexPageData } from "../utils/data/indexPageData"
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout isIndexPage>
       <PageWrapper>
         <HeroContainer>
           <StyledMainHeaderHero>
@@ -25,13 +25,12 @@ const IndexPage = () => {
           <StyledUnderMainHeaderHero>
             { IndexPageData.UnderMainHeaderHero }
           </StyledUnderMainHeaderHero>
-          <StyledMarkSliderContainer>
-            { IndexPageData.MarkSliderTitle }
-            <SliderElement>
-              <Slider />
-            </SliderElement>
-          </StyledMarkSliderContainer>
         </HeroContainer>
+        <ImageHeroRightSideComponentWrapper>
+          <ImageHeroRightSideComponentIMAGEWRAPPER>
+            <ImageHeroRightSideComponent/>
+          </ImageHeroRightSideComponentIMAGEWRAPPER>
+        </ImageHeroRightSideComponentWrapper>
       </PageWrapper>
     </Layout>
   )

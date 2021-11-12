@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
 import BgLine from "../assets/svg/bg_line.svg"
+import bgImage from "../assets/img/heroBgImage.png"
 
 export const PageWrapper = styled.div`
-    background-image: url( ${ BgLine } );
     width: 100%;
     margin-top: 35px;
     padding: 20px;
@@ -18,13 +18,15 @@ export const PageWrapper = styled.div`
     }
 `
 export const HeroContainer = styled.div`
-    width: 80%;
+    width: 50%;
     display: flex;
     flex-direction: column;
+    background-image: url( ${ BgLine } );
 `
 export const StyledMainHeaderHero = styled.div`
-    line-height: 75px;
-    font-size: 70px;
+    text-align: right;
+    line-height: 80px;
+    font-size: 80px;
 
     @media (max-width: 1535px) {
     line-height: 70px;
@@ -58,8 +60,6 @@ export const StyledMainHeaderHero = styled.div`
 export const StyledUnderMainHeaderHero = styled.div`
     text-align: right;
     font-size: 20px;
-    width: 90%;
-    float: right;
     padding: 5px 0 15px 0;
 
     @media (max-width: 1535px) {
@@ -75,43 +75,24 @@ export const StyledUnderMainHeaderHero = styled.div`
     font-size: 11px;
     }
 `
-export const StyledMarkSliderContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @media (max-width: 1023px) {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+export const ImageHeroRightSideComponentWrapper = styled.div`
+    width: 35%;
+    height: 99vh;
+    margin-left: 50px;
+    background-color: white;
 `
-export const SliderElement = styled.div`
-    width: 700px;
-    height: 100px;
-    margin-left: 15px;
-    z-index: 1;
-
-    @media (max-width: 1279px) {
-        width: 600px;
-    }
-    @media (max-width: 1023px) {
-        width: 500px;
-    }
-    @media (max-width: 767px) {
-        width: 400px;
-    }
-    @media (max-width: 600px) {
-        width: 350px;
-    }
-    @media (max-width: 500px) {
-        width: 300px;
-    }
-    @media (max-width: 450px) {
-        width: 250px;
-        margin-left: 0;
-    }
-    @media (max-width: 350px) {
-        width: 200px;
-        margin-left: 15px;
-    }
+export const ImageHeroRightSideComponentIMAGEWRAPPER = styled.div`
+    position: absolute;
+    height: 100%;
+    width: 40vw;
+    top: 0;
+    right: 0;
+`
+export const ImageHeroRightSideComponent = styled.div`
+    background-image: url( ${ bgImage } );
+    background-size: cover;
+    background-position: right;
+    opacity: 0.2;
+    height: 100%;
+    height: 100%;
 `
