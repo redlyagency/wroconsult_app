@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 import BgLine from "../assets/svg/bg_line.svg"
-import bgImage from "../assets/img/heroBgImage.png"
+import bgImage from "../assets/img/heroBgImage.webp"
 
 export const PageWrapper = styled.div`
     position: absolute;
