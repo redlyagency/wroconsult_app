@@ -4,12 +4,8 @@ import Layout from "../components/base/layout"
 
 import {
   PageWrapper,
-  HeroContainer,
   StyledMainHeaderHero,
   StyledUnderMainHeaderHero,
-  ImageHeroRightSideComponentWrapper,
-  ImageHeroRightSideComponentIMAGEWRAPPER,
-  ImageHeroRightSideComponent,
   HeaderWrapper,
   FooterWrapper,
   LeftSide,
