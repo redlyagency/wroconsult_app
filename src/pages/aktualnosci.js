@@ -4,8 +4,16 @@ import { graphql } from 'gatsby';
 import Layout from "../components/base/layout"
 
 import {
-  PageWrapper
-} from "../styles/nasiKlienci.style"
+  PageWrapper,
+  BlogCardWrapper,
+  BlogCardElement,
+  ThumbnailImage,
+  ContentInlineWrapper,
+  PreContentParagraph,
+  ReadMoreParagraph,
+  BlogTitleHeader,
+  BlogDateParagraph,
+} from "../styles/aktualnosci.style"
 
 //import { NasiKlienciPageData } from "../utils/data/nasiKlienciPageData"
 import { Headers } from "../utils/data/headersData"
@@ -21,17 +29,28 @@ const NaszeProjektyPage = ({ data }) => {
         <H1
           name={ Headers.Aktualnosci }
         />
-        <div>
+        <BlogCardWrapper>
             {articles.map(({node}) => {
                 return (
                     <div key={node.slug}>
-                        <a href={node.slug}>
-                            {node.title}
+                        <a href={"/aktualnosci/" + node.slug}>
+                            <BlogCardElement>
+                              <ThumbnailImage
+                                src={node.thumbnailPhoto.fluid.src}
+                                srcSet={node.thumbnailPhoto.fluid.srcSet}
+                              />
+                              <ContentInlineWrapper>
+                                <BlogTitleHeader>{node.title}</BlogTitleHeader>
+                                <PreContentParagraph dangerouslySetInnerHTML={{ __html: node.content }}/>
+                                <BlogDateParagraph>{node.date}</BlogDateParagraph>
+                              </ContentInlineWrapper>
+                              <ReadMoreParagraph>Czytaj więcej <span style={{color: '#BF1E2D', fontSize: '11px'}}>&#10148;</span></ReadMoreParagraph>
+                            </BlogCardElement>
                         </a>
                     </div>
                 )
             })}
-        </div>
+        </BlogCardWrapper>
       </PageWrapper>
     </Layout>
   )
@@ -42,9 +61,16 @@ export const query = graphql`
         allDatoCmsArticle {
             edges {
                 node {
-                    title
-                    slug
-                    content
+                  id
+                  thumbnailPhoto {
+                    fluid {
+                      ...GatsbyDatoCmsFluid
+                    }
+                  }
+                  title
+                  slug
+                  content
+                  date
                 }
             }
         }
