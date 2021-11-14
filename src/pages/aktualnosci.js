@@ -30,12 +30,13 @@ const NaszeProjektyPage = ({ data }) => {
           name={ Headers.Aktualnosci }
         />
         <BlogCardWrapper>
-            {articles.map(({node}) => {
+            {articles.reverse().map(({node}) => {
                 return (
                     <div key={node.slug}>
                         <a href={"/aktualnosci/" + node.slug}>
                             <BlogCardElement>
                               <ThumbnailImage
+                                className="j10_dfg4gvBDG"
                                 src={node.thumbnailPhoto.fluid.src}
                                 srcSet={node.thumbnailPhoto.fluid.srcSet}
                               />
@@ -44,7 +45,7 @@ const NaszeProjektyPage = ({ data }) => {
                                 <PreContentParagraph dangerouslySetInnerHTML={{ __html: node.content }}/>
                                 <BlogDateParagraph>{node.date}</BlogDateParagraph>
                               </ContentInlineWrapper>
-                              <ReadMoreParagraph>Czytaj więcej <span style={{color: '#BF1E2D', fontSize: '11px'}}>&#10148;</span></ReadMoreParagraph>
+                              <ReadMoreParagraph className="j5_dfg4gvBDG">Czytaj więcej <span style={{color: '#BF1E2D', fontSize: '11px'}}>&#10148;</span></ReadMoreParagraph>
                             </BlogCardElement>
                         </a>
                     </div>
