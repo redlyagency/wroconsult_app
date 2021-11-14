@@ -1,12 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import Layout from '../components/base/layout'
+import H1 from '../components/headers/h1'
+
 const Article = ({ pageContext: { slug }, data: { article }}) => {
     return (
-        <div>
-            <h1>{article.title}</h1>
-            <p>{article.content}</p>
-        </div>
+        <Layout>
+            <H1
+                name={article.title}
+            />
+
+            <div dangerouslySetInnerHTML={{ __html: article.content }} />
+        </Layout>
     )
 }
 
