@@ -5,7 +5,8 @@ const Article = ({ pageContext: { slug }, data: { article }}) => {
     return (
         <div>
             <h1>{article.title}</h1>
-            <p>{article.content}</p>
+
+            <div dangerouslySetInnerHTML={{ __html: article.content }} />
         </div>
     )
 }
