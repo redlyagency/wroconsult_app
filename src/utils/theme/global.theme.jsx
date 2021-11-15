@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     html {
         height: 100vh;
         min-height: 100vh;
+        min-width: 320px;
     }
     body {
         margin: 0;
@@ -21,10 +22,12 @@ export const GlobalStyle = createGlobalStyle`
         height: 100vh;
         min-height: 100vh;
         font-family: "Poppins";
+        min-width: 320px;
     }
     .tl-edges, .tl-wrapper, .tl-wrapper--mount, .tl-wrapper-status--entered {
         height: 100vh !important;
         min-height: 100vh !important;
+        min-width: 320px;
     }
     .tl-wrapper {
         transform: none !important;

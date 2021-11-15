@@ -25,6 +25,7 @@ export const LeftSide = styled.div`
     width: 60vw;
     height: 100vh;
     display: flex;
+    display: -webkit-flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
