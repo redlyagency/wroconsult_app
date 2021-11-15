@@ -11,5 +11,6 @@ export const PageWrapper = styled.div`
 
     @media (max-width: 1023px) {
         margin-top: 20px;
+        height: auto;
     }
 `
