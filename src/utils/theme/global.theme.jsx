@@ -128,4 +128,59 @@ export const GlobalStyle = createGlobalStyle`
         left: 0 !important;
     }
 
+    //article section
+    
+    blockquote {
+        color: #4d4d4d !important;
+        position: relative;
+        padding: 10px 0 10px 15px;
+        width: 90%;
+        
+        :before {
+            content: '';
+            height: 95%;
+            width: 3px;
+            background-color: #b9b9b9;
+            position: absolute;
+            left: 3px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    blockquote p {
+        color: #686868 !important;
+    }
+    blockquote strong {
+        color: #2c2c2c !important;
+        font-weight: 700;
+    }
+    u {
+        padding: 5px;
+        position: relative;
+
+        ::after {
+            content: '';
+            background-color: #b9b9b97d;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            height: 70%;
+            width: 100%;
+        }
+        :hover::after {
+            transition: 0.2s;
+            background-color: #b9b9b9a0;
+            left: 10px;
+            top: 10px;
+        }
+        :hover {
+            transition: 0.2s;
+            margin-left: -2px;
+            margin-top: -2px;
+        }
+    }
+
+    .gfrw_df463V img {
+        padding: 10px 0 10px 0;
+    }
 `
