@@ -10,9 +10,10 @@ import Footer from "./footer"
 import { CookieDataAlert, HelmetData } from "../../utils/data/layoutData"
 
 import { GlobalStyle } from "../../utils/theme/global.theme"
+import { CircularProgress } from "@mui/material"
 
 const Preloader = styled.div`
-    background-color: #BF1E2D;
+    background-color: #cfcfcf;
     position: fixed;
     left: 0;
     top: 0;
@@ -22,6 +23,9 @@ const Preloader = styled.div`
     transition: 1s;
     animation-name: ease-out1;
     animation-duration: 1.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @keyframes ease-out1 {
         0% {
@@ -35,67 +39,6 @@ const Preloader = styled.div`
         }
     }
 `
-const PreloaderSymbol = styled.div`
-    position: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    background-color: #BF1E2D;
-
-    &:before,
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        box-sizing: border-box;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        margin: auto;
-        height: 70px;
-        width: 70px;
-        border: 2px white solid;
-        border-radius: 50%;
-        opacity: 1;
-        animation: loader-1-ripple 3s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
-    }
-
-    &:after {
-        animation: loader-1-ripple2 3s cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s
-            infinite;
-    }
-
-    @keyframes loader-1-ripple {
-        0% {
-            transform: translate3d(0, 0, 0) scale(0);
-            opacity: 1;
-        }
-        20% {
-            opacity: 1;
-        }
-        100% {
-            transform: translate3d(0, 0, 0) scale(1.5);
-            opacity: 0;
-        }
-    }
-
-    @keyframes loader-1-ripple2 {
-        0% {
-            transform: translate3d(0, 0, 0) scale(0);
-            opacity: 1;
-        }
-        20% {
-            opacity: 1;
-        }
-        100% {
-            transform: translate3d(0, 0, 0) scale(1);
-            opacity: 0;
-        }
-    }
-`
-
 const CookieConsentWrapper = styled.div`
     bottom: 0 !important;
     position: fixed !important;
@@ -155,7 +98,7 @@ const Layout = (props, { children }) => {
                     {props.children}
                     {loader ?
                         <Preloader>
-                            <PreloaderSymbol />
+                            <CircularProgress color="error" />
                         </Preloader>
                     :  children}
                 <Footer isIndexPage={ props.isIndexPage }/>

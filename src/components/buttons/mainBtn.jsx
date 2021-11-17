@@ -14,6 +14,7 @@ class MainBtn extends React.Component {
                     hex="#BF1E2D"
                     duration={0.5}
                     to={ this.props.link }
+                    isContactPage={this.props.isContactPage}
                 >
                     { this.props.name }
                 </RightSideButtonElementMobile>

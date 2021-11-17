@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/base/layout'
 import H1 from '../components/headers/h1'
+import BackBtnComponent from '../components/buttons/backBtn'
 
 import {
     PageWrapper,
@@ -22,6 +23,7 @@ const Article = ({ pageContext: { slug }, data: { article }}) => {
                 <ArticleBodyWrapper>
                     <ArticleBody className="gfrw_df463V" dangerouslySetInnerHTML={{ __html: article.content }} />
                 </ArticleBodyWrapper>
+                <BackBtnComponent />
             </PageWrapper>
         </Layout>
     )

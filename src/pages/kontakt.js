@@ -1,34 +1,18 @@
 import React from "react"
-import styled from "styled-components"
 
 import Layout from "../components/base/layout"
 
 import {
-  PageWrapper
+  PageWrapper,
+  IframeGoogleMapsWrapper,
+  IframeGoogleMaps,
 } from "../styles/kontakt.style"
 
-//import { NasiKlienciPageData } from "../utils/data/nasiKlienciPageData"
 import { Headers } from "../utils/data/headersData"
 
 import H1 from "../components/headers/h1"
 import ContactParagraph from "../components/paragraphs/contactParagraph"
 import ContactFormulage from "../components/form/contactFormulage"
-
-const IframeGoogleMaps = styled.iframe`
-  border: 0;
-  height: 450px;
-  width: 450px;
-
-  @media (max-width: 500px) {
-    height: 300px;
-    width: 300px;
-  }
-`
-const IframeGoogleMapsWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
 
 const NaszeProjektyPage = () => {
   return (

@@ -6,7 +6,7 @@ export const MainBtnWrapper = styled.nav`
 `
 export const RightSideButtonElementMobile = styled(AniLink)`
     padding: 7px 25px 7px 25px;
-    font-size: 20px;
+    font-size: ${({isContactPage}) => isContactPage ? '15px' : '20px'};
     color: white;
     font-family: 'Poppins';
     border-radius: 5px;

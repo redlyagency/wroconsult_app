@@ -4,7 +4,12 @@ import TextField from '@mui/material/TextField';
 
 import SubmitBtn from "../buttons/mainBtn"
 
+//<TextField id="standard-basic" label="Email" variant="standard" color="error" /><br />
+//<TextField id="standard-basic" label="Temat wiadomości" variant="standard" color="error" /><br />
+//<TextField id="standard-basic" label="Treść wiadomości" variant="standard" color="error" />
+
 const ContactFormulageWrapper = styled.div`
+    background-color: cornflowerblue;
 
 `
 
@@ -14,10 +19,10 @@ class ContactFormulage extends React.Component {
             <ContactFormulageWrapper>
 
                     <TextField id="standard-basic" label="Nazwa" variant="standard" color="error" />
-                    <TextField id="standard-basic" label="Email" variant="standard" color="error" /><br />
-                    <TextField id="standard-basic" label="Temat wiadomości" variant="standard" color="error" /><br />
-                    <TextField id="standard-basic" label="Treść wiadomości" variant="standard" color="error" />
-                    <SubmitBtn name="submit_btn"/>
+                    <SubmitBtn
+                        isContactPage
+                        name="Wyślij"
+                    />
             </ContactFormulageWrapper>
         )
     }

@@ -12,3 +12,18 @@ export const PageWrapper = styled.div`
     margin-top: 20px;
     }
 `
+export const IframeGoogleMaps = styled.iframe`
+    border: 0;
+    height: 450px;
+    width: 450px;
+
+    @media (max-width: 500px) {
+        height: 300px;
+        width: 300px;
+    }
+`
+export const IframeGoogleMapsWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
