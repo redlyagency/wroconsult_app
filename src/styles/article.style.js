@@ -29,5 +29,5 @@ export const DateParagraph = styled.p`
     color: #BF1E2D;
     font-family: 'Poppins';
     font-weight: 700;
-    
+    padding-top: 10px;
 `
