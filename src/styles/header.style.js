@@ -111,7 +111,7 @@ export const RightSideButtonElement = styled(AniLink)`
 
     :hover {
         color: #BF1E2D;
-        background-color: white;
+        background-color: transparent;
     }
 `
 

@@ -14,6 +14,7 @@ class MainBtn extends React.Component {
                     hex="#BF1E2D"
                     duration={0.5}
                     to={ this.props.link }
+                    isSmallFont={this.props.isSmallFont}
                 >
                     { this.props.name }
                 </RightSideButtonElementMobile>

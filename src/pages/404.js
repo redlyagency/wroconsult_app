@@ -22,6 +22,7 @@ class Page404 extends React.Component {
           <MainBtn
             name={Page404Data.BtnTitle}
             link={Page404Data.BtnLink}
+            isSmallFont
           />
         </PageWrapper>
       </Layout>

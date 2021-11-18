@@ -66,6 +66,7 @@ const ContactFormulage = () => {
                 title: values.message_title,
                 content: values.message_content
             })
+            window.location.replace('/wyslano');
         },
     });
     
