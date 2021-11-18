@@ -4,7 +4,9 @@ import Layout from "../components/base/layout"
 
 import {
   PageWrapper,
-  IframeGoogleMapsWrapper,
+  ContactBlockWrapper,
+  ContactBlockWrapper2,
+  ContactBlockWrapper3,
   IframeGoogleMaps,
 } from "../styles/kontakt.style"
 
@@ -21,20 +23,20 @@ const NaszeProjektyPage = () => {
         <H1
           name={ Headers.Kontakt }
         />
-        <div className="grid grid-cols-1 gap-1 lg:grid-cols-3 mt-10">
-            <IframeGoogleMapsWrapper style={{backgroundColor: 'lightgray'}}>
+        <div className="grid grid-cols-1 gap-8 xl:grid-cols-3 xl:gap-2 mt-10">
+            <ContactBlockWrapper>
               <ContactParagraph />
-            </IframeGoogleMapsWrapper>
-            <IframeGoogleMapsWrapper style={{backgroundColor: '#f7f7f7'}}>
+            </ContactBlockWrapper>
+            <ContactBlockWrapper2>
               <ContactFormulage />  
-            </IframeGoogleMapsWrapper>  
-          <IframeGoogleMapsWrapper style={{backgroundColor: 'lightgray'}}>
+            </ContactBlockWrapper2>  
+          <ContactBlockWrapper3>
             <IframeGoogleMaps
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d625.4509309718869!2d16.921812829261626!3d51.16740783965954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fead9e5c829ad%3A0xa2b62464772832dd!2sSiedlecka%2026%2C%2054-101%20Wroc%C5%82aw!5e0!3m2!1spl!2spl!4v1635447637061!5m2!1spl!2spl"
               allowfullscreen=""
               loading="lazy"
             />
-          </IframeGoogleMapsWrapper>
+          </ContactBlockWrapper3>
         </div>
       </PageWrapper>
     </Layout>

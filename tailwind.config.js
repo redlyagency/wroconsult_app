@@ -4,9 +4,12 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      
     },
-    extend: {},
+    extend: {
+      screens: {
+        'muchSmall': {'raw': '(max-width: 400px)'},
+      }
+    },
   },
   variants: {
     extend: {},

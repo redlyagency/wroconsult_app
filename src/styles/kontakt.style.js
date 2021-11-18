@@ -16,6 +16,7 @@ export const IframeGoogleMaps = styled.iframe`
     border: 0;
     height: 450px;
     width: 450px;
+    padding: 10px;
 
     @media (max-width: 500px) {
         height: 300px;
@@ -26,4 +27,37 @@ export const IframeGoogleMapsWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+`
+export const ContactBlockWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef81;
+    border-radius: 15px;
+
+    @media (max-width: 1279px) {
+        background-color: transparent;
+    }
+`
+export const ContactBlockWrapper2 = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6e6e688;
+    border-radius: 15px;
+    
+    @media (max-width: 1279px) {
+        background-color: transparent;
+    }
+`
+export const ContactBlockWrapper3 = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef81;
+    border-radius: 15px;
+
+    @media (max-width: 1279px) {
+        background-color: transparent;
+    }
 `

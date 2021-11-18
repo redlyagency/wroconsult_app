@@ -4,16 +4,13 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import axios from "axios"
 import TextField from '@mui/material/TextField';
+import { FormLabel } from "@mui/material";
 
 const ContactFormulageWrapper = styled.form`
     width: 400px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-`
-const ContactFormulageHeaderGroup = styled.div`
-    display: flex;
-    justify-content: space-between;
 `
 const ContactFormulageHeaderGroupBtn = styled.div`
     display: flex;
@@ -53,15 +50,13 @@ const validationSchema = yup.object({
 const ContactFormulage = () => {
     const formik = useFormik({
         initialValues: {
-            name: '',
             email: '',
             message_title: '',
             message_content: '',
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
-            axios.post('https://getform.io/f/6915d5b6-d9c5-43b2-a46d-59142bbaaad9', {
-                name: values.name,
+            axios.post('https://getform.io/f/dc97685f-123b-4ad2-b67a-7f6be4ecb186', {
                 email: values.email,
                 title: values.message_title,
                 content: values.message_content
@@ -74,28 +69,19 @@ const ContactFormulage = () => {
         <ContactFormulageWrapper
             onSubmit={formik.handleSubmit}
         >
-            <ContactFormulageHeaderGroup>
-                <TextField
-                    id="standard-basic"
-                    label="Nazwa"
-                    variant="standard"
-                    color="error" 
-                    type="text"
-                    name="name"
-                    onChange={formik.handleChange}
-                />
-                <TextField
-                    id="standard-basic"
-                    label="Email"
-                    variant="standard"
-                    color="error" 
-                    type="text"
-                    name="email"
-                    onChange={formik.handleChange}
-                    error={formik.touched.email && Boolean(formik.errors.email)}
-                    helperText={formik.touched.email && formik.errors.email}
-                />
-            </ContactFormulageHeaderGroup>
+            <FormLabel style={{fontWeight: '700'}}>Skontaktuj się z nami poprzez formularz kontaktowy</FormLabel>
+            <TextField
+                id="standard-basic"
+                label="Email"
+                variant="standard"
+                color="error" 
+                type="text"
+                name="email"
+                fullWidth
+                onChange={formik.handleChange}
+                error={formik.touched.email && Boolean(formik.errors.email)}
+                helperText={formik.touched.email && formik.errors.email}
+            />
             <TextField
                 id="standard-basic"
                 label="Temat wiadomości"
