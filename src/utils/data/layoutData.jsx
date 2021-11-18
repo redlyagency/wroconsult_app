@@ -47,4 +47,9 @@ export const Page404Data = {
     Content: <p><span style={{color: '#BF1E2D'}}>404</span><br/>Strona której szukasz <span style={{color: '#BF1E2D'}}>nie istnieje</span></p>,
     BtnTitle: 'Powrót na stronę główną',
     BtnLink: '/'
-} 
+}
+export const SuccessPageData = {
+    Content: <p><span style={{color: '#BF1E2D'}}>Sukces!</span><br/>Wiadomość została<span style={{color: '#BF1E2D'}}> wysłana z powodzeniem</span></p>,
+    BtnTitle: 'Powrót na stronę główną',
+    BtnLink: '/'
+}

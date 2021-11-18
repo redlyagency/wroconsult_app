@@ -11,9 +11,10 @@ class MainBtn extends React.Component {
             <MainBtnWrapper>
                 <RightSideButtonElementMobile
                     paintDrip
-                    hex="#BF1E2D"
+                    hex="#cfcfcf"
                     duration={0.5}
                     to={ this.props.link }
+                    isSmallFont={this.props.isSmallFont}
                 >
                     { this.props.name }
                 </RightSideButtonElementMobile>

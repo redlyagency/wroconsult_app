@@ -11,7 +11,7 @@ class ContactParagraph extends React.Component {
     render() {
         return(
             <ContactParagraphWrapper
-                className="grid grid-cols-1 gap-4 lg:grid-cols-2"
+                className="grid muchSmall:grid-cols-1 gap-4 grid-cols-2"
             >
                 {ContactPageData.map((value, index) => {
                     return (

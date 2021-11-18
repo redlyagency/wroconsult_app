@@ -29,7 +29,7 @@ const Header = (props) => {
                 <AniLink 
                     to="/"
                     paintDrip
-                    hex="#BF1E2D"
+                    hex="#cfcfcf"
                     duration={0.5}
                 >
                     <Logo showNav={menu} />
@@ -42,7 +42,7 @@ const Header = (props) => {
                                 <Li key={index}>
                                     <AniLink
                                         paintDrip
-                                        hex="#BF1E2D"
+                                        hex="#cfcfcf"
                                         duration={0.5}
                                         to={value.Link}
                                         activeClassName="selected"
@@ -65,7 +65,7 @@ const Header = (props) => {
                     <RightSideButtonElement
                         showNav={menu}
                         paintDrip
-                        hex="#BF1E2D"
+                        hex="#cfcfcf"
                         duration={0.5}
                         to={ NavbarDataButton.Link }
                     >
@@ -79,7 +79,7 @@ const Header = (props) => {
                 <AniLink 
                     to="/"
                     paintDrip
-                    hex="#BF1E2D"
+                    hex="#cfcfcf"
                     duration={0.5}
                 >
                     <Logo
@@ -103,7 +103,7 @@ const Header = (props) => {
                             <LiMobile key={index}>
                                 <LinkMobile
                                     paintDrip
-                                    hex="#BF1E2D"
+                                    hex="#cfcfcf"
                                     to={value.Link}
                                     duration={0.5}
                                     activeClassName="selected2"
@@ -117,7 +117,7 @@ const Header = (props) => {
                 <RightSideButtonElementMobile
                     showNav={menu}
                     paintDrip
-                    hex="#BF1E2D"
+                    hex="#cfcfcf"
                     duration={0.5}
                     to={ NavbarDataButton.Link }
                 >
