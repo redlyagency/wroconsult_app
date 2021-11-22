@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     html {
         height: 100vh;
         min-height: 100vh;
+        min-height: -webkit-fill-available;
         min-width: 320px;
     }
     body {
@@ -21,6 +22,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         height: 100vh;
         min-height: 100vh;
+        height: -webkit-fill-available;
         font-family: "Poppins";
         min-width: 320px;
     }

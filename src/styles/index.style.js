@@ -31,8 +31,7 @@ export const LeftSide = styled.div`
     flex-direction: column;
 
     @media (max-width: 1023px) {
-        align-items: baseline;
-        justify-content: end;
+        position: absolute;
         margin-bottom: 25px;
         width: 100vw;
     }
@@ -47,6 +46,7 @@ export const RightSide = styled.div`
     @media (max-width: 1023px) {
         width: 100vw;
         height: 50vh;
+        opacity: 0.15;
     }
 `
 export const StyledMainHeaderHero = styled.h1`

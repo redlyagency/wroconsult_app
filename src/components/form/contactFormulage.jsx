@@ -56,12 +56,12 @@ const ContactFormulage = () => {
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
-            axios.post('https://getform.io/f/dc97685f-123b-4ad2-b67a-7f6be4ecb186', {
+            axios.post('https://getform.io/f/3c3adf38-4116-4648-ac36-c82b7cb6c035', {
                 email: values.email,
                 title: values.message_title,
                 content: values.message_content
             })
-            window.location.replace('/wyslano');
+            //to change
         },
     });
     
