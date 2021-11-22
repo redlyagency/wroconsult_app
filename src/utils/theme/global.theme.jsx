@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     html {
         height: 100vh;
         min-height: 100vh;
+        min-height: -webkit-fill-available;
         min-width: 320px;
     }
     body {
@@ -21,6 +22,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         height: 100vh;
         min-height: 100vh;
+        height: -webkit-fill-available;
         font-family: "Poppins";
         min-width: 320px;
     }
@@ -157,26 +159,28 @@ export const GlobalStyle = createGlobalStyle`
     u {
         padding: 5px;
         position: relative;
+        transition-timing-function: ease-in-out;
+        text-decoration: none;
 
         ::after {
             content: '';
-            background-color: #b9b9b97d;
+            background-color: #bf1e2e6a;
             position: absolute;
-            left: 5px;
-            top: 5px;
-            height: 70%;
+            left: 0;
+            bottom: 0;
+            height: 5%;
             width: 100%;
+            transition-timing-function: ease-in-out;
+            z-index: -1;
         }
         :hover::after {
             transition: 0.2s;
-            background-color: #b9b9b9a0;
-            left: 10px;
-            top: 10px;
+            height: 100%;
+            transition-timing-function: ease-in-out;
         }
         :hover {
             transition: 0.2s;
-            margin-left: -2px;
-            margin-top: -2px;
+            transition-timing-function: ease-in-out;
         }
     }
 
