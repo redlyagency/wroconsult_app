@@ -18,8 +18,8 @@ jobs:
       - name: Archive production artifact
         uses: actions/upload-artifact@main
         with:
-          name: build
-          path: build
+          name: public
+          path: public
   deploy:
     name: Deploy 🚀
     needs: build
