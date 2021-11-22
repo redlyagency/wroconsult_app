@@ -1,4 +1,4 @@
-name: Build and deploy - Redly App
+name: Build and deploy - Wroconsult App
 on:
   push:
     branches: [main]
