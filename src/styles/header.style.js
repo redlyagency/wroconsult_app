@@ -118,7 +118,6 @@ export const RightSideButtonElement = styled(AniLink)`
 export const MobileMenuSectionBlank = styled.div`
     width: 100%;
     height: 75px;
-    margin-top: 10px;
 
     @media (min-width: 1023px) {
         display: none;
@@ -129,7 +128,6 @@ export const MobileMenuSection = styled.div`
     padding: 10px 25px 10px 25px;
     width: 100%;
     height: 85px;
-    margin-top: 10px;
     position: fixed;
     top: 0;
     left: 0;
