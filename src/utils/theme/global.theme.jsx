@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     ::selection {color: #ffffff; background: #bf1e2e6c;}
     html {
         height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
         min-height: 100vh;
         min-height: -webkit-fill-available;
         min-width: 320px;
@@ -21,6 +22,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
         min-height: 100vh;
         height: -webkit-fill-available;
         font-family: "Poppins";
@@ -28,6 +30,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     .tl-edges, .tl-wrapper, .tl-wrapper--mount, .tl-wrapper-status--entered {
         height: 100vh !important;
+        height: calc(var(--vh, 1vh) * 100);
         min-height: 100vh !important;
         min-width: 320px;
     }
