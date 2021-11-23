@@ -86,7 +86,7 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
     .StyledButtonClasses {
-        background-color: #d1d1d1;
+        background-color: #BF1E2D;
         font-size: 15px;
         color: white;
         font-family: 'Poppins';
