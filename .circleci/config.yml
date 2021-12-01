@@ -1,12 +1,19 @@
-version: 2
+version: 2.1
+orbs:
+  node: circleci/node@4.7
 name: Build and deploy - Wroconsult App
 on:
     push:
       branches: [main]
     workflow_dispatch:
 
+var_1: &job_defaults
+  docker:
+  - image: node:10
+
 jobs:
     build:
+      <<: *job_defaults
       name: Build ⛏
       runs-on: ubuntu-latest
       steps:
@@ -21,6 +28,7 @@ jobs:
           with:
               name: public
               path: public
+        - checkout 
     deploy:
         name: Deploy 🚀
         needs: build
