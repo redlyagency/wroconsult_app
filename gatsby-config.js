@@ -73,6 +73,21 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `extra`,
+        path: `./src/extra`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-copy-files-enhanced',
+      options: {
+        source: `./src/extra`,
+        destination: '/',
+        purge: false,
+      },
+    },
     `gatsby-plugin-transition-link`,
   ],
 };
