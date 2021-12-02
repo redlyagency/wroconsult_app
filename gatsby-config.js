@@ -77,13 +77,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `extra`,
-        path: `./src/extra`,
+        path: `${__dirname}/src/extra`,
       },
     },
     {
       resolve: 'gatsby-plugin-copy-files-enhanced',
       options: {
-        source: `./src/extra`,
+        source: `${__dirname}/src/extra`,
         destination: '/',
         purge: false,
       },
