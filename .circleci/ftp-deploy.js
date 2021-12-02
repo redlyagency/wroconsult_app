@@ -4,9 +4,6 @@ const basicFtpClient = new ftp.Client()
 const https = require('https');
 
 const LOCAL_BUILD_DIRECTORY = "public"
-const DEPLOY_DIRECTORY_NAME = "temp"
-const PRODUCTION_DIRECTORY_NAME = "master"
-const BROKEN_BUILD = "broken"
 const PRODUCTION_URL = "https://wroconsult.pl/"
 
 const [ host, user, password ] = process.argv.slice(2)
@@ -35,7 +32,7 @@ function uploadBuildDirectory(){
     user,
     password,
     localRoot: `./${LOCAL_BUILD_DIRECTORY}`,
-    remoteRoot: `./${DEPLOY_DIRECTORY_NAME}`,
+    remoteRoot: `./`,
     include: ["*", "**/*"]
   }
 
@@ -56,45 +53,6 @@ function uploadBuildDirectory(){
     .then(() => console.log(`Upload COMPLETED`))
 }
 
-async function renameFtpDirectories(){
-  await basicFtpClient.access({ host, user, password })
-
-  const directories = await basicFtpClient.list(".")
-  const backupDirectoryName = createBackupDirectoryName(directories)
-  console.log(`Backup folder name: ${backupDirectoryName}`)
-
-  await basicFtpClient.rename(PRODUCTION_DIRECTORY_NAME, backupDirectoryName)
-  await basicFtpClient.rename(DEPLOY_DIRECTORY_NAME, PRODUCTION_DIRECTORY_NAME)
-  console.log("Renaming COMPLETED")
-
-  return backupDirectoryName
-}
-
-function createBackupDirectoryName(directories) {
-  const productionDirectory = directories
-    .find(fileInfo => fileInfo.name === PRODUCTION_DIRECTORY_NAME)
-
-  const formattedDate = formatDate(productionDirectory.modifiedAt)
-
-  const numberOfDateOccurrences = directories
-    .filter(fileInfo => fileInfo.name.includes(formattedDate))
-    .length
-
-  if(numberOfDateOccurrences === 0){
-    return formattedDate
-  } else {
-    return `${formattedDate}_${numberOfDateOccurrences + 1}`
-  }
-}
-
-function formatDate(date) {
-  const month = date.getMonth() + 1
-  const paddedMonth = month.toString().padStart(2, "0")
-  const paddedDay = date.getDate().toString().padStart(2, "0")
-
-  return `${date.getFullYear()}.${paddedMonth}.${paddedDay}`
-}
-
 function isProductionLive() {
   return new Promise((resolve) => {
     https
@@ -106,13 +64,6 @@ function isProductionLive() {
         resolve(false)
       })
   })
-}
-
-async function rollBackProduction(backupDirectoryName){
-  await basicFtpClient.rename(PRODUCTION_DIRECTORY_NAME, BROKEN_BUILD)
-  await basicFtpClient.rename(backupDirectoryName, PRODUCTION_DIRECTORY_NAME)
-  console.log(`Rollback COMPLETED`)
-  fail()
 }
 
 function onError(name, error){
