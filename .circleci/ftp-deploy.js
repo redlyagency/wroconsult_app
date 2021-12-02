@@ -7,7 +7,7 @@ const LOCAL_BUILD_DIRECTORY = "public"
 const DEPLOY_DIRECTORY_NAME = "temp"
 const PRODUCTION_DIRECTORY_NAME = "master"
 const BROKEN_BUILD = "broken"
-const PRODUCTION_URL = "https://akjaw.com/"
+const PRODUCTION_URL = "https://wroconsult.pl/"
 
 const [ host, user, password ] = process.argv.slice(2)
 
