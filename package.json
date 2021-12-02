@@ -28,6 +28,7 @@
     "formik": "^2.2.9",
     "ftp-deploy": "^2.4.1",
     "gatsby": "^3.14.3",
+    "gatsby-plugin-copy-files-enhanced": "^1.1.1",
     "gatsby-plugin-gdpr-cookies": "^2.0.8",
     "gatsby-plugin-image": "^1.14.1",
     "gatsby-plugin-manifest": "^3.14.0",
