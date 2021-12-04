@@ -12,8 +12,6 @@ function main() {
 
   return uploadBuildDirectory()
     .catch(error => onError("Upload", error))
-    .then(() => renameFtpDirectories())
-    .catch(error => onError("Rename", error))
     .then(async backupDirectoryName => {
       const isLive = await isProductionLive()
       if(!isLive) return rollBackProduction(backupDirectoryName)
