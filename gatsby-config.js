@@ -73,21 +73,32 @@ module.exports = {
       },
       __key: "pages",
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `extra`,
-        path: `${__dirname}/src/extra`,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-copy-files-enhanced',
-      options: {
-        source: `${__dirname}/src/extra`,
-        destination: '/',
-        purge: false,
-      },
-    },
     `gatsby-plugin-transition-link`,
+    {
+      resolve: 'gatsby-plugin-htaccess',
+      options: {
+        https: true,
+        host: 'wroconsult.pl', // if 'www' is set to 'false', be sure to also remove it here!
+        ErrorDocument: `
+          ErrorDocument 404 404.html
+        `,
+        custom: `
+          RewriteEngine On
+          RewriteCond %{HTTPS} off [OR]
+          RewriteCond %{HTTP_HOST} !^wroconsult\.pl$ [NC]
+          RewriteRule ^(.*)$ https://wroconsult.pl/$1 [L,R=301]
+          
+          <IfModule mod_rewrite.c>
+              RewriteEngine On
+              RewriteBase /
+              RewriteRule ^index\.html$ - [L]
+              RewriteCond %{REQUEST_FILENAME} !-f
+              RewriteCond %{REQUEST_FILENAME} !-d
+              RewriteCond %{REQUEST_FILENAME} !-l
+              RewriteRule . /index.html [L]
+          </IfModule>
+        `,
+      },
+    },
   ],
 };
