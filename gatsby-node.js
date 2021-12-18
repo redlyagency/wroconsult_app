@@ -1,44 +1,44 @@
-const _ = require('lodash')
+// const _ = require('lodash')
 
-const wrapper = promise =>
-    promise.then(result => {
-        if (result.errors) {
-            throw result.errors
-        }
-        return result
-    })
+// const wrapper = promise =>
+//     promise.then(result => {
+//         if (result.errors) {
+//             throw result.errors
+//         }
+//         return result
+//     })
 
-exports.createPages = async({ graphql, actions }) => {
-    const { createPage } = actions
+// exports.createPages = async({ graphql, actions }) => {
+//     const { createPage } = actions
 
-    const result = await wrapper(
-        graphql(`
-            {
-                allDatoCmsArticle {
-                    edges {
-                        node {
-                            title
-                            slug
-                            content
-                        }
-                    }
-                }
-            }
-        `)
-    )
+//     const result = await wrapper(
+//         graphql(`
+//             {
+//                 allDatoCmsArticle {
+//                     edges {
+//                         node {
+//                             title
+//                             slug
+//                             content
+//                         }
+//                     }
+//                 }
+//             }
+//         `)
+//     )
 
-    const articles = result.data.allDatoCmsArticle.edges
-    const articleTemplate = require.resolve('./src/templates/article.js')
+//     const articles = result.data.allDatoCmsArticle.edges
+//     const articleTemplate = require.resolve('./src/templates/article.js')
 
-    articles.forEach(({ node }, index) => {
-        const { slug } = node
+//     articles.forEach(({ node }, index) => {
+//         const { slug } = node
 
-        createPage({
-            path: "/aktualnosci/" + slug,
-            component: articleTemplate,
-            context: {
-                slug
-            }
-        })
-    })
-}
+//         createPage({
+//             path: "/aktualnosci/" + slug,
+//             component: articleTemplate,
+//             context: {
+//                 slug
+//             }
+//         })
+//     })
+// }
