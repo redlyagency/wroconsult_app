@@ -31,30 +31,6 @@ const AktualnosciPage = ({ data }) => {
             const post = node.content
             const option = {
               renderNode: {
-                // [BLOCKS.EMBEDDED_ASSET]: node => {
-                //     return <img/>
-                // },
-                // [BLOCKS.HEADING_1]: (node, children) => {
-                //     return <p style={{padding: '0', margin: '0', display: 'inline-block'}}>{children}</p>
-                // },
-                // [BLOCKS.HEADING_5]: (node, children) => {
-                //     return <p style={{padding: '0', margin: '0', display: 'inline-block'}}>{children}</p>
-                // },
-                // [BLOCKS.PARAGRAPH]: (node, children) => {
-                //     return <p style={{padding: '0', margin: '0', display: 'inline-block'}}>{children}</p>
-                // },
-                // [BLOCKS.QUOTE]: (node, children) => {
-                //     return <p style={{padding: '0', margin: '0', display: 'inline-block'}}>{children}</p>
-                // },
-                // [BLOCKS.UL_LIST]: (node, children) => {
-                //     return <p style={{padding: '0', margin: '0', display: 'inline-block'}}>{children}</p>
-                // },
-                // [BLOCKS.LIST_ITEM]: (node, children) => {
-                //     return <p style={{padding: '0', margin: '0', display: 'inline-block'}}>{children}</p>
-                // },
-                // [BLOCKS.DOCUMENT]: (node, children) => {
-                //   return <div style={{backgroundColor: 'red'}}>{children}</div>
-                // },
                 [BLOCKS.DOCUMENT]: (node, children) => {
                   return <div>{children}</div>
                 },
