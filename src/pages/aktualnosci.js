@@ -93,13 +93,13 @@ const AktualnosciPage = ({ data }) => {
                 [MARKS.BOLD]: (node, children) => {
                     return <p>{children}</p>
                 },
-                [MARKS.BOLD]: (node, children) => {
+                [MARKS.ITALIC]: (node, children) => {
                   return <p>{children}</p>
                 },
-                [MARKS.BOLD]: (node, children) => {
+                [MARKS.UNDERLINE]: (node, children) => {
                   return <p>{children}</p>
                 },
-                [MARKS.BOLD]: (node, children) => {
+                [MARKS.CODE]: (node, children) => {
                   return <p>{children}</p>
                 },
               }

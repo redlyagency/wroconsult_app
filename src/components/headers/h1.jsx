@@ -2,7 +2,8 @@ import React from "react"
 import styled from "styled-components"
 
 const H1Wrapper = styled.div`
-
+    position: ${props => props.position ? props.position : 'static'};
+    z-index: ${props => props.zIndex ? props.zIndex : '0'};
 `
 const H1 = styled.h1`
     font-size: 52px;
@@ -20,7 +21,7 @@ const H1 = styled.h1`
 class H1Component extends React.Component {
     render() {
         return(
-            <H1Wrapper>
+            <H1Wrapper position={ this.props.position } zIndex={ this.props.zIndex } >
                 <H1>
                     { this.props.name }
                 </H1>
