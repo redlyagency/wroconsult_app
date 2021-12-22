@@ -68,6 +68,7 @@ export const TrStyled = styled.tr`
 `
 export const ThStyled = styled.th`
     background-color: ${({isRed}) => isRed ? 'rgba(190, 30, 46, 0.1)' : 'rgba(230, 230, 230, 0.48)'};
+    width: ${({isRed}) => isRed ? '185px' : 'auto'};
 
     @media (max-width: 1023px) {
         display: block;

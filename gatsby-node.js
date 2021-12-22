@@ -1,44 +1,25 @@
-const _ = require('lodash')
-
-const wrapper = promise =>
-    promise.then(result => {
-        if (result.errors) {
-            throw result.errors
-        }
-        return result
-    })
-
-exports.createPages = async({ graphql, actions }) => {
-    const { createPage } = actions
-
-    const result = await wrapper(
-        graphql(`
-            {
-                allDatoCmsArticle {
-                    edges {
-                        node {
-                            title
-                            slug
-                            content
-                        }
+exports.createPages = async function({actions, graphql}) {
+    const { data } = await graphql(`
+         { allContentfulArtykul {
+                edges {
+                    node {
+                        slug
                     }
                 }
             }
-        `)
+        }
+    `
     )
 
-    const articles = result.data.allDatoCmsArticle.edges
-    const articleTemplate = require.resolve('./src/templates/article.js')
+// Create single blog posts
 
-    articles.forEach(({ node }, index) => {
-        const { slug } = node
-
-        createPage({
-            path: "/aktualnosci/" + slug,
-            component: articleTemplate,
-            context: {
-                slug
-            }
-        })
+data.allContentfulArtykul.edges.forEach(edge => {
+    const slug = edge.node.slug
+    actions.createPage({
+        path: "/aktualnosci/" + slug,
+        component: require.resolve(`./src/templates/article.js`),
+        context: { slug }
     })
+})
+
 }

@@ -134,59 +134,6 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     //article section
-    
-    blockquote {
-        color: #4d4d4d !important;
-        position: relative;
-        padding: 10px 0 10px 15px;
-        width: 90%;
-        
-        :before {
-            content: '';
-            height: 95%;
-            width: 3px;
-            background-color: #b9b9b9;
-            position: absolute;
-            left: 3px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    }
-    blockquote p {
-        color: #686868 !important;
-    }
-    blockquote strong {
-        color: #2c2c2c !important;
-        font-weight: 700;
-    }
-    u {
-        padding: 5px;
-        position: relative;
-        transition-timing-function: ease-in-out;
-        text-decoration: none;
-
-        ::after {
-            content: '';
-            background-color: #bf1e2e6a;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 5%;
-            width: 100%;
-            transition-timing-function: ease-in-out;
-            z-index: -1;
-        }
-        :hover::after {
-            transition: 0.2s;
-            height: 100%;
-            transition-timing-function: ease-in-out;
-        }
-        :hover {
-            transition: 0.2s;
-            transition-timing-function: ease-in-out;
-        }
-    }
-
     .gfrw_df463V img {
         padding: 10px 0 10px 0;
     }

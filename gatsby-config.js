@@ -29,11 +29,11 @@ module.exports = {
     },
     'gatsby-plugin-postcss',
     {
-      resolve: "gatsby-source-datocms",
+      resolve: `gatsby-source-contentful`,
       options: {
-        apiToken: "6415ce12fe772a3e45d8b15d6fc0e2",
-        preview: false,
-        disableLiveReload: false,
+        spaceId: `exi6z12o2eyt`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: `G-elWdLPS0jAEwgW5kSJ5NFWG-L3JjkrGwJ2lUb7FnE`,
       },
     },
     "gatsby-plugin-styled-components",
