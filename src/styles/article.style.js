@@ -79,3 +79,28 @@ export const QuoteBlock = styled.div`
         top: 0;
     }
 `
+export const HyperlinkBlock = styled.a`
+    padding: 5px;
+    position: relative;
+    transition: ease-in-out !important;
+    text-decoration: none;
+
+    ::after {
+        content: '';
+        background-color: #bf1e2e6a;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 5%;
+        width: 100%;
+        transition: ease-in-out !important;
+        z-index: -1;
+    }
+    :hover::after {
+        height: 100%;
+        transition: 0.2s ease-in-out !important;
+    }
+    :hover {
+        transition: 0.2s ease-in-out !important;
+    }
+`

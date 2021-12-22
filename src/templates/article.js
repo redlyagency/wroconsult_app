@@ -14,18 +14,19 @@ import {
     HeaderBannerCover,
     HeaderBannerCoverBlurEffect,
     QuoteBlock,
+    HyperlinkBlock,
 } from "../styles/article.style"
 
 const Article = ({ data }) => {
     const post = data.contentfulArtykul.content
     const option = {
         renderNode: {
-            // [BLOCKS.DOCUMENT]: (node, children) => {
-            //     return <div>{children}</div>
-            // },
-            // [BLOCKS.PARAGRAPH]: (node, children) => {
-            //     return <div>{children}</div>
-            // },
+            [BLOCKS.DOCUMENT]: (node, children) => {
+                return <div>{children}</div>
+            },
+            [BLOCKS.PARAGRAPH]: (node, children) => {
+                return <div>{children}</div>
+            },
             [BLOCKS.HEADING_1]: (node, children) => {
                 return <div style={{ fontSize: '35px', fontWeight: '700' }}>{children}</div>
             },
@@ -69,16 +70,7 @@ const Article = ({ data }) => {
                 return <div>{children}</div>
             },
             [INLINES.HYPERLINK]: ({ data }, children) => {
-                return (
-                    <a
-                        href={data.uri}
-                        target={`${data.uri ? '_self' : '_blank'}`}
-                        rel={`${data.uri ? '' : 'noopener noreferrer'}`}
-                        style={{ display: 'inline-block', textDecoration: 'underline' }}
-                    >
-                        {children}
-                    </a>
-                )
+                return <HyperlinkBlock href={data.uri} target={`${data.uri ? '_self' : '_blank'}`} rel={`${data.uri ? '' : 'noopener noreferrer'}`}>{children}</HyperlinkBlock>
             },
             [INLINES.ENTRY_HYPERLINK]: (node, children) => {
                 return <div>{children}</div>
@@ -88,18 +80,10 @@ const Article = ({ data }) => {
             },
         },
         renderMark: {
-            [MARKS.BOLD]: (node, children) => {
-                return <b>{children}</b>
-            },
-            [MARKS.ITALIC]: (node, children) => {
-                return <p>{children}</p>
-            },
-            [MARKS.UNDERLINE]: (node, children) => {
-                return <p style={{ textDecoration: 'underline' }}>{children}</p>
-            },
-            [MARKS.CODE]: ({data}, children) => {
-                return <code>{children}</code>
-            },
+            [MARKS.BOLD]: (text, key) => <strong key={key}>{text}</strong>,
+            [MARKS.ITALIC]: (text, key) => <em key={key}>{text}</em>,
+            [MARKS.UNDERLINE]: (text, key) => <u key={key}>{text}</u>,
+            [MARKS.CODE]: (text, key) => <code key={key}>{text}</code>,
         }
     }
     return (

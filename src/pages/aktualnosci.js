@@ -32,77 +32,69 @@ const AktualnosciPage = ({ data }) => {
             const option = {
               renderNode: {
                 [BLOCKS.DOCUMENT]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [BLOCKS.PARAGRAPH]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [BLOCKS.HEADING_1]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [BLOCKS.HEADING_2]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [BLOCKS.HEADING_3]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [BLOCKS.HEADING_4]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [BLOCKS.HEADING_5]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [BLOCKS.HEADING_6]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [BLOCKS.UL_LIST]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [BLOCKS.OL_LIST]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [BLOCKS.LIST_ITEM]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [BLOCKS.QUOTE]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [BLOCKS.HR]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [INLINES.EMBEDDED_ENTRY]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [INLINES.HYPERLINK]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [INLINES.ENTRY_HYPERLINK]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
                 [INLINES.ASSET_HYPERLINK]: (node, children) => {
-                  return <div>{children}</div>
+                  return <div style={{display: 'inline-block'}}>{children}&nbsp;</div>
                 },
               },
               renderMark: {
-                [MARKS.BOLD]: (node, children) => {
-                    return <p>{children}</p>
-                },
-                [MARKS.ITALIC]: (node, children) => {
-                  return <p>{children}</p>
-                },
-                [MARKS.UNDERLINE]: (node, children) => {
-                  return <p>{children}</p>
-                },
-                [MARKS.CODE]: (node, children) => {
-                  return <p>{children}</p>
-                },
-              }
+                [MARKS.BOLD]: (text, key) => <p key={key} style={{display: 'inline-block'}}>{text}&nbsp;</p>,
+                [MARKS.ITALIC]: (text, key) => <p key={key} style={{display: 'inline-block'}}>{text}&nbsp;</p>,
+                [MARKS.UNDERLINE]: (text, key) => <p key={key} style={{display: 'inline-block'}}>{text}&nbsp;</p>,
+                [MARKS.CODE]: (text, key) => <p key={key} style={{display: 'inline-block'}}>{text}&nbsp;</p>,
+            }
             }
             return (
               <div key={node.slug}>
