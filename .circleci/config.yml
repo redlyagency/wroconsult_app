@@ -3,7 +3,7 @@ orbs:
   node: circleci/node@4.7.0
 
 jobs:
-  build-deploy:
+  build:
     executor:
       name: node/default
       tag: '16.11.1'
@@ -19,7 +19,7 @@ workflows:
   version: 2
   main:
     jobs:
-      - build-deploy:
+      - build:
           filters:
             branches:
               only: main
