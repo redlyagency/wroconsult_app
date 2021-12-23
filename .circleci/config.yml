@@ -14,14 +14,6 @@ jobs:
       - run:
           name: Deploying
           command: node ./.circleci/ftp-deploy.js $FTP_ADDRESS $FTP_USER $FTP_PASSWORD
-      - run:
-          name: Notify DatoCMS about the status of the job
-          command: 'curl -X POST --data-binary "{\"payload\": { \"branch\": \"$CIRCLE_BRANCH\", \"status\": \"failed\" } }" https://webhooks.datocms.com/1cd0c86d1a/deploy-results'
-          when: on_fail
-      - run:
-          name: Notify DatoCMS about the status of the job
-          command: 'curl -X POST --data-binary "{\"payload\": { \"branch\": \"$CIRCLE_BRANCH\", \"status\": \"success\" } }" https://webhooks.datocms.com/1cd0c86d1a/deploy-results'
-          when: on_success
   
 workflows:
   version: 2
