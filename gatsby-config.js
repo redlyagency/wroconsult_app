@@ -1,9 +1,13 @@
+const siteUrl = process.env.URL || `https://wroconsult.pl`
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.wroconsult.pl",
     title: "Wroconsult",
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-sitemap",
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
