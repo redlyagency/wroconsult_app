@@ -1,4 +1,3 @@
-const siteUrl = process.env.URL || `https://wroconsult.pl`
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.wroconsult.pl",
