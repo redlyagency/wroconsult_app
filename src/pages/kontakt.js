@@ -14,7 +14,7 @@ import { Headers } from "../utils/data/headersData"
 
 import H1 from "../components/headers/h1"
 import ContactParagraph from "../components/paragraphs/contactParagraph"
-import ContactFormulage from "../components/form/contactFormulage"
+import ContactFormulage from "../components/form/contactFormulage2"
 
 const NaszeProjektyPage = () => {
   return (

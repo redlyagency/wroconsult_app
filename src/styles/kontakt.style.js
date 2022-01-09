@@ -45,6 +45,7 @@ export const ContactBlockWrapper2 = styled.div`
     justify-content: center;
     background-color: #e6e6e688;
     border-radius: 15px;
+    flex-direction: column;
     
     @media (max-width: 1279px) {
         background-color: transparent;
