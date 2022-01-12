@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { Helmet } from "react-helmet"
 import CookieConsent from 'react-cookie-consent'
-import "@fontsource/poppins"
 
 import Header from "./header"
 import Footer from "./footer"

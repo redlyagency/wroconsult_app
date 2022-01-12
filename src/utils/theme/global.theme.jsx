@@ -137,4 +137,9 @@ export const GlobalStyle = createGlobalStyle`
     .gfrw_df463V img {
         padding: 10px 0 10px 0;
     }
+
+    input, textarea {
+        border: none;
+        outline: none;
+    }
 `
