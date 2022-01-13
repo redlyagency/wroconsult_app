@@ -8,6 +8,10 @@ const P = styled.p`
     font-style: italic;
     font-family: 'Poppins';
     padding: 15px 0 5px 0;
+
+    @media (max-width: 1023px) {
+        text-align: center;
+    }
 `
 const A = styled.a`
     color: #BF1E2D;
@@ -15,6 +19,12 @@ const A = styled.a`
     font-weight: 600;
     font-style: italic;
     font-family: 'Poppins';
+
+    @media (max-width: 1023px) {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
 `
 
 export const ContactPageData = [
@@ -28,7 +38,7 @@ export const ContactPageData = [
     },
     {
         header: <P>Numery telefonów</P>,
-        content: <p><A href="tel:+48717230086">71-723-00-86</A>,<br /><A href="tel:+48734403063">734-40-30-63</A>,<br /><A href="tel:+48605231112">605-23-11-12</A></p>
+        content: <p><A href="tel:+48717230086">71-723-00-86,<br /></A><A href="tel:+48734403063">734-40-30-63,<br /></A><A href="tel:+48605231112">605-23-11-12</A></p>
     },
     {
         header: <P>Numery fax</P>,

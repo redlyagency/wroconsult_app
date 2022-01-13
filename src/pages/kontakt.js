@@ -9,9 +9,11 @@ import {
   LeftSideInnerContainer,
   CenterSidePage,
   OrParagraph,
+  FooterWrapper,
 } from "../styles/kontakt.style"
 
 import { Headers } from "../utils/data/headersData"
+import { FooterData } from "../utils/data/layoutData"
 
 import H1 from "../components/headers/h1"
 import ContactParagraph from "../components/paragraphs/contactParagraph"
@@ -35,6 +37,9 @@ const NaszeProjektyPage = () => {
         <RightSidePage>
           <ContactParagraph />
         </RightSidePage>
+        <FooterWrapper>
+          { FooterData.Title }
+        </FooterWrapper>
       </PageWrapper>
     </Layout>
   )
