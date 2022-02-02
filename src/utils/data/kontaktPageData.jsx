@@ -7,7 +7,7 @@ const P = styled.p`
     font-weight: 700;
     font-style: italic;
     font-family: 'Poppins';
-    padding: 15px 0 5px 0;
+    padding: 30px 0 5px 0;
 
     @media (max-width: 1023px) {
         text-align: center;
@@ -38,10 +38,6 @@ export const ContactPageData = [
     },
     {
         header: <P>Numery telefonów</P>,
-        content: <p><A href="tel:+48717230086">71-723-00-86,<br /></A><A href="tel:+48734403063">734-40-30-63,<br /></A><A href="tel:+48605231112">605-23-11-12</A></p>
-    },
-    {
-        header: <P>Numery fax</P>,
-        content: <A href='fax:717237216'>71-723-72-16</A>
+        content: <A href="tel:+48605231112">605-23-11-12</A>
     },
 ]

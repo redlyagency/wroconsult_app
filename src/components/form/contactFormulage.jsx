@@ -1,6 +1,7 @@
 import React from "react"
 import { useFormik } from "formik"
 import * as Yup from 'yup'
+import axios from "axios"
 import {
     ContactFormulageWrapper,
     H2,
@@ -29,8 +30,12 @@ const ContactFormulage = () => {
             name: Yup.string().required('To pole jest wymagane'),
             message: Yup.string().required('To pole jest wymagane'),
         }),
-        onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+        onSubmit: (values) => {
+            axios.post('https://naughty-mclean-23d3b1.netlify.app', {
+                email: values.email,
+                name: values.name,
+                message: values.message,
+            })
         },
     })
     return(
@@ -50,7 +55,7 @@ const ContactFormulage = () => {
                                 onBlur={formik.handleBlur}
                                 value={formik.values.email}
                             />
-                            <Label for="email">Adres Email</Label>
+                            <Label htmlFor="email">Adres Email</Label>
                         </Field>
                         {formik.touched.email && formik.errors.email ? (
                             <ErrorAlert>{formik.errors.email}</ErrorAlert>
@@ -66,7 +71,7 @@ const ContactFormulage = () => {
                                 onBlur={formik.handleBlur}
                                 value={formik.values.name}
                             />
-                            <Label for="name">Nazwa Podmiotu</Label>
+                            <Label htmlFor="name">Nazwa Podmiotu</Label>
                         </Field>
                         {formik.touched.name && formik.errors.name ? (
                             <ErrorAlert>{formik.errors.name}</ErrorAlert>
@@ -83,7 +88,7 @@ const ContactFormulage = () => {
                                 onBlur={formik.handleBlur}
                                 value={formik.values.message}
                             ></Textarea>
-                            <LabelTextarea for="message">Treść wiadomości</LabelTextarea>
+                            <LabelTextarea htmlFor="message">Treść wiadomości</LabelTextarea>
                         </Field>
                         {formik.touched.message && formik.errors.message ? (
                             <ErrorAlert>{formik.errors.message}</ErrorAlert>

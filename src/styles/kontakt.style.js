@@ -16,7 +16,7 @@ export const PageWrapper = styled.div`
 `
 export const LeftSidePage = styled.div`
     height: 100vh;
-    width: 55vw;
+    width: 50vw;
     padding: 170px 0 170px 100px;
     display: flex;
     justify-content: flex-end;
@@ -30,7 +30,7 @@ export const LeftSidePage = styled.div`
 `
 export const CenterSidePage = styled.div`
     height: 100vh;
-    width: 10vw;
+    width: 15vw;
     display: flex;
     justify-content: center;
     align-items: center;
