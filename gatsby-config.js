@@ -1,3 +1,13 @@
+if (process.env.STAGING) {
+  require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}.prod`
+  })
+} else {
+  require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`
+  })
+}
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.wroconsult.pl",
@@ -34,9 +44,9 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `exi6z12o2eyt`,
+        spaceId: `${process.env.CONTENTFUL_SPACE_ID}`,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: `G-elWdLPS0jAEwgW5kSJ5NFWG-L3JjkrGwJ2lUb7FnE`,
+        accessToken: `${process.env.CONTENTFUL_ACCESS_TOKEN}`,
       },
     },
     "gatsby-plugin-styled-components",

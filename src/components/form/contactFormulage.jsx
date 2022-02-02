@@ -1,114 +1,95 @@
 import React from "react"
-import styled from "styled-components"
-import { useFormik } from 'formik';
-import * as yup from 'yup';
-import axios from "axios"
-import TextField from '@mui/material/TextField';
-import { FormLabel } from "@mui/material";
-
-const ContactFormulageWrapper = styled.form`
-    width: 400px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-`
-const ContactFormulageHeaderGroupBtn = styled.div`
-    display: flex;
-    justify-content: center;
-`
-const SubmitBtn = styled.button`
-    padding: 7px 80px 7px 80px;
-    font-size: 15px;
-    color: white;
-    font-family: 'Poppins';
-    border-radius: 5px;
-    border: 2px #BF1E2D solid;
-    background-color: #BF1E2D;
-    transition: 0.2s;
-    margin-top: 10px;
-
-    :hover {
-        background-color: transparent;
-        color: #BF1E2D;
-    }
-
-    @media (max-width: 1023px) {
-        font-size: 15px;
-    }
-`
-
-const validationSchema = yup.object({
-    email: yup
-    .string('')
-    .email("Musi zawierać '@'")
-    .required('To pole jest wymagane'),
-    message_content: yup
-    .string('')
-    .required('To pole jest wymagane'),
-});
+import { useFormik } from "formik"
+import * as Yup from 'yup'
+import {
+    ContactFormulageWrapper,
+    H2,
+    Form,
+    FormFlexWrapper,
+    LeftCol,
+    RightCol,
+    Field,
+    Input,
+    Label,
+    Textarea,
+    LabelTextarea,
+    Button,
+    ErrorAlert,
+} from "./contactFormulage.style"
 
 const ContactFormulage = () => {
     const formik = useFormik({
         initialValues: {
             email: '',
-            message_title: '',
-            message_content: '',
+            name: '',
+            message: '',
         },
-        validationSchema: validationSchema,
-        onSubmit: (values) => {
-            axios.post('https://getform.io/f/3c3adf38-4116-4648-ac36-c82b7cb6c035', {
-                email: values.email,
-                title: values.message_title,
-                content: values.message_content
-            })
-            //to change
-        },
-    });
-    
-    return (
-        <ContactFormulageWrapper
-            onSubmit={formik.handleSubmit}
-        >
-            <FormLabel style={{fontWeight: '700'}}>Skontaktuj się z nami poprzez formularz kontaktowy</FormLabel>
-            <TextField
-                id="standard-basic"
-                label="Email"
-                variant="standard"
-                color="error" 
-                type="text"
-                name="email"
-                fullWidth
-                onChange={formik.handleChange}
-                error={formik.touched.email && Boolean(formik.errors.email)}
-                helperText={formik.touched.email && formik.errors.email}
-            />
-            <TextField
-                id="standard-basic"
-                label="Temat wiadomości"
-                variant="standard"
-                color="error" 
-                type="text"
-                name="message_title"
-                fullWidth
-                onChange={formik.handleChange}
-            />
-            <TextField
-                id="standard-basic"
-                label="Treść wiadomości"
-                variant="standard"
-                color="error" 
-                type="text"
-                name="message_content"
-                fullWidth
-                multiline
-                rows={6}
-                onChange={formik.handleChange}
-                error={formik.touched.message_content && Boolean(formik.errors.message_content)}
-                helperText={formik.touched.message_content && formik.errors.message_content}
-            />
-            <ContactFormulageHeaderGroupBtn>
-                <SubmitBtn type="submit">Wyślij</SubmitBtn>
-            </ContactFormulageHeaderGroupBtn>
+        validationSchema: Yup.object({
+            email: Yup.string().email('Niepoprawny adres email').required('To pole jest wymagane'),
+            name: Yup.string().required('To pole jest wymagane'),
+            message: Yup.string().required('To pole jest wymagane'),
+        })
+    })
+    return(
+        <ContactFormulageWrapper>
+            <H2>Skontaktuj się z nami poprzez formularz kontaktowy</H2>
+            <Form method="post" action="https://naughty-mclean-23d3b1.netlify.app/">
+                <FormFlexWrapper>
+                    <LeftCol>
+                        {/* email field */}
+                        <Field>
+                            <Input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder=" "
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                value={formik.values.email}
+                            />
+                            <Label htmlFor="email">Adres Email</Label>
+                        </Field>
+                        {formik.touched.email && formik.errors.email ? (
+                            <ErrorAlert>{formik.errors.email}</ErrorAlert>
+                        ) : null}
+                        {/* name field */}
+                        <Field>
+                            <Input
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder=" "
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                value={formik.values.name}
+                            />
+                            <Label htmlFor="name">Nazwa Podmiotu</Label>
+                        </Field>
+                        {formik.touched.name && formik.errors.name ? (
+                            <ErrorAlert>{formik.errors.name}</ErrorAlert>
+                        ) : null}
+                    </LeftCol>
+                    {/* message field */}
+                    <RightCol>
+                        <Field>
+                            <Textarea
+                                name="message"
+                                id="message"
+                                placeholder=" "
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                value={formik.values.message}
+                            ></Textarea>
+                            <LabelTextarea htmlFor="message">Treść wiadomości</LabelTextarea>
+                        </Field>
+                        {formik.touched.message && formik.errors.message ? (
+                            <ErrorAlert>{formik.errors.message}</ErrorAlert>
+                        ) : null}
+                    </RightCol>
+                </FormFlexWrapper>
+                {/* submit button */}
+                <Button>Wyślij</Button>
+            </Form>
         </ContactFormulageWrapper>
     )
 }
