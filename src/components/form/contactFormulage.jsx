@@ -1,7 +1,6 @@
 import React from "react"
 import { useFormik } from "formik"
 import * as Yup from 'yup'
-import axios from "axios"
 import {
     ContactFormulageWrapper,
     H2,
@@ -29,19 +28,12 @@ const ContactFormulage = () => {
             email: Yup.string().email('Niepoprawny adres email').required('To pole jest wymagane'),
             name: Yup.string().required('To pole jest wymagane'),
             message: Yup.string().required('To pole jest wymagane'),
-        }),
-        onSubmit: (values) => {
-            axios.post('https://naughty-mclean-23d3b1.netlify.app', {
-                email: values.email,
-                name: values.name,
-                message: values.message,
-            })
-        },
+        })
     })
     return(
         <ContactFormulageWrapper>
             <H2>Skontaktuj się z nami poprzez formularz kontaktowy</H2>
-            <Form onSubmit={formik.handleSubmit}>
+            <Form method="post" action="https://naughty-mclean-23d3b1.netlify.app/">
                 <FormFlexWrapper>
                     <LeftCol>
                         {/* email field */}
