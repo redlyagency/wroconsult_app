@@ -104,3 +104,13 @@ export const HyperlinkBlock = styled.a`
         transition: 0.2s ease-in-out !important;
     }
 `
+export const ImgBlockArticleWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+`
+export const ImgBlockArticle = styled.img`
+    width: 70%;
+    border-radius: 15px;
+`

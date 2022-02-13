@@ -15,6 +15,8 @@ import {
     HeaderBannerCoverBlurEffect,
     QuoteBlock,
     HyperlinkBlock,
+    ImgBlockArticleWrapper,
+    ImgBlockArticle,
 } from "../styles/article.style"
 
 const Article = ({ data }) => {
@@ -64,7 +66,7 @@ const Article = ({ data }) => {
                 return <div>{children}</div>
             },
             [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
-                return <div>{children}</div>
+                return <ImgBlockArticleWrapper><ImgBlockArticle src={node.data.target.fixed.src} srcSet={node.data.target.fixed.srcSet} sizes="3x"/></ImgBlockArticleWrapper>
             },
             [INLINES.EMBEDDED_ENTRY]: (node, children) => {
                 return <div>{children}</div>
@@ -122,7 +124,7 @@ export const query = graphql`
                 ... on ContentfulAsset {
                     __typename
                     contentful_id
-                        fixed(width: 200) {
+                        fixed(width: 1700) {
                             src
                             srcSet
                         }
