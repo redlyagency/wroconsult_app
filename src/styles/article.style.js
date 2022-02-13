@@ -113,4 +113,8 @@ export const ImgBlockArticleWrapper = styled.div`
 export const ImgBlockArticle = styled.img`
     width: 70%;
     border-radius: 15px;
+
+    @media (max-width: 600px) {
+        width: 100%;
+    }
 `
