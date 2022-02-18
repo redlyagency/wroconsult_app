@@ -150,6 +150,7 @@ export const MobileButtonWrapper = styled.button`
     position: relative;
     border: none;
     margin-top: 0;
+    padding: 20px;
     @media (max-width: 1023px) {
         display: unset;
     }
@@ -158,8 +159,6 @@ export const MobileButtonInner = styled.div`
     width: 18px;
     height: 4px;
     position: absolute;
-    right: 15px;
-    bottom: 10px;
     border-radius: 10px;
     background-color: ${({hamburger}) => hamburger ? 'transparent' : '#76777A'};
     transition: 0.2s;

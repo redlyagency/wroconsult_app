@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
     *, *::before, *::after {
         box-sizing: border-box;
         font-family: 'Poppins';
+        transition: 0.2s;
     }
     #root {margin: 0;padding: 0;}
     ::-webkit-scrollbar {width: 10px;} 
