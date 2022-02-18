@@ -91,7 +91,7 @@ const Article = ({ data }) => {
     return (
         <Layout>
             <PageWrapper>
-                <div style={{ position: 'relative' }}>
+                <div style={{ position: 'relative', zIndex: '1'}}>
                     <HeaderBannerCoverBlurEffect />
                     <HeaderBannerCover dataImg={data.contentfulArtykul.thumbnailPhoto.fluid.src} />
                     <H1 position='relative' zIndex='100' name={data.contentfulArtykul.title}/>
