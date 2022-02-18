@@ -315,6 +315,7 @@ export const TopScrollGradient = styled.div`
     position: sticky;
     top: 0;
     z-index: 500;
+    z-index: 1;
 `
 export const BottomScrollGradient = styled.div`
     width: 100%;
@@ -324,4 +325,5 @@ export const BottomScrollGradient = styled.div`
     position: sticky;
     bottom: -2px;
     z-index: 500;
+    z-index: 1;
 `
