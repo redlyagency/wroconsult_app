@@ -311,7 +311,7 @@ export const TopScrollGradient = styled.div`
     width: 100%;
     height: 50px;
     background: rgb(255,255,255);
-    background: linear-gradient(-180deg, rgba(255,255,255,1) 2%, rgba(255,0,0,0) 100%);
+    background: linear-gradient(-180deg, rgba(255,255,255,1) 10%, rgba(255, 255, 255, 0)) 100%;
     position: sticky;
     top: 0;
     z-index: 500;
@@ -320,7 +320,7 @@ export const BottomScrollGradient = styled.div`
     width: 100%;
     height: 50px;
     background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 2%, rgba(255,0,0,0) 100%);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255, 255, 255, 0)) 100%;
     position: sticky;
     bottom: -2px;
     z-index: 500;
