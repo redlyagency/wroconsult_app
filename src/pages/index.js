@@ -151,10 +151,10 @@ const IndexPage = ({ data }) => {
               </ArticleScrollSection>
           </IndexLatestArticlesBannerWrapper>
         </RightSide>
-      </PageWrapper>
-      <FooterWrapper>
+        <FooterWrapper>
           { FooterData.Title }
-      </FooterWrapper>
+        </FooterWrapper>
+      </PageWrapper>
     </Layout>
   )
 }

@@ -6,7 +6,8 @@ import bgImage from "../assets/img/heroBgImage.webp"
 export const PageWrapper = styled.div`
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 850px;
     left: 0;
     top: 0;
     display: flex;
