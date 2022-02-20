@@ -6,7 +6,8 @@ import bgImage from "../assets/img/heroBgImage.webp"
 export const PageWrapper = styled.div`
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 850px;
     left: 0;
     top: 0;
     display: flex;
@@ -315,6 +316,7 @@ export const TopScrollGradient = styled.div`
     position: sticky;
     top: 0;
     z-index: 500;
+    z-index: 1;
 `
 export const BottomScrollGradient = styled.div`
     width: 100%;
@@ -324,4 +326,5 @@ export const BottomScrollGradient = styled.div`
     position: sticky;
     bottom: -2px;
     z-index: 500;
+    z-index: 1;
 `

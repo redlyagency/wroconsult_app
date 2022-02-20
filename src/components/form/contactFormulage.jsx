@@ -33,7 +33,7 @@ const ContactFormulage = () => {
     return(
         <ContactFormulageWrapper>
             <H2>Skontaktuj się z nami poprzez formularz kontaktowy</H2>
-            <Form method="post" action="https://naughty-mclean-23d3b1.netlify.app/">
+            <Form method="post" action="https://api.wroconsult.pl/dev/contact/">
                 <FormFlexWrapper>
                     <LeftCol>
                         {/* email field */}
