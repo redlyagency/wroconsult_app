@@ -32,6 +32,10 @@ const ContactFormulage = () => {
         }),
         onSubmit: values => {
             axios.post('https://1sysobpx3f.execute-api.eu-north-1.amazonaws.com/prod/contact', values)
+            .then(response => {
+                window.location.replace('/wyslano')
+            })
+
         },
     })
     return(
