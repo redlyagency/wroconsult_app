@@ -1,6 +1,7 @@
 import React from "react"
 import { useFormik } from "formik"
 import * as Yup from 'yup'
+import axios from "axios"
 import {
     ContactFormulageWrapper,
     H2,
@@ -28,12 +29,15 @@ const ContactFormulage = () => {
             email: Yup.string().email('Niepoprawny adres email').required('To pole jest wymagane'),
             name: Yup.string().required('To pole jest wymagane'),
             message: Yup.string().required('To pole jest wymagane'),
-        })
+        }),
+        onSubmit: values => {
+            axios.post('https://1sysobpx3f.execute-api.eu-north-1.amazonaws.com/prod/contact', values)
+        },
     })
     return(
         <ContactFormulageWrapper>
             <H2>Skontaktuj się z nami poprzez formularz kontaktowy</H2>
-            <Form method="post" action="https://api.wroconsult.pl/dev/contact/">
+            <Form onSubmit={formik.handleSubmit}>
                 <FormFlexWrapper>
                     <LeftCol>
                         {/* email field */}
