@@ -244,7 +244,7 @@ export const ThumbnailImage = styled.img`
     }
 `
 export const ContentInlineWrapper = styled.div`
-    width: 500px;
+    width: 200px;
     margin-left: 25px;
     
     @media (max-width: 1023px) {
