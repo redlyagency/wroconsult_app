@@ -126,10 +126,9 @@ const IndexPage = ({ data }) => {
                         <div key={node.slug}>
                             <a href={"/aktualnosci/" + node.slug}>
                             <BlogCardElement>
-                                <ThumbnailImage
-                                className="j10_dfg4gvBDG"
-                                src={node.thumbnailPhoto.fluid.src}
-                                srcSet={node.thumbnailPhoto.fluid.srcSet}
+                                <ThumbnailImage 
+                                  className="j10_dfg4gvBDG"
+                                  src={node.thumbnailPhoto.fluid.src}
                                 />
                                 <ContentInlineWrapper>
                                 <BlogTitleHeader>{node.title}</BlogTitleHeader>

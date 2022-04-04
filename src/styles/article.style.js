@@ -1,9 +1,6 @@
 import styled from "styled-components"
 
-import BgLine from "../assets/svg/bg_line.svg"
-
 export const PageWrapper = styled.div`
-    background-image: url( ${ BgLine } );
     width: 100%;
     margin-top: 35px;
     padding: 20px;
@@ -110,11 +107,29 @@ export const ImgBlockArticleWrapper = styled.div`
     justify-content: center;
     padding: 10px 0;
 `
-export const ImgBlockArticle = styled.img`
-    width: 70%;
+export const ImgBlockArticle = styled.div`
     border-radius: 15px;
+    background-image: ${props => `url(${props.src})`};
+    background-size: cover;
+    width: 90%;
+    height: 500px;
 
-    @media (max-width: 600px) {
+    @media (max-width: 1535px) {
+        height: 400px;
+    }
+    @media (max-width: 1279px) {
+        height: 350px;
+    }
+    @media (max-width: 767px) {
+        height: 300px;
+    }
+    @media (max-width: 650px) {
         width: 100%;
+    }
+    @media (max-width: 600px) {
+        height: 250px;
+    }
+    @media (max-width: 500px) {
+        height: 200px;
     }
 `

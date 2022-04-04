@@ -232,27 +232,28 @@ export const BlogCardElement = styled.div`
         align-items: flex-start;
     } 
 `
-export const ThumbnailImage = styled.img`
-    width: 170px;
+export const ThumbnailImage = styled.div`
+    width: 150px;
     min-width: 140px;
     height: 90px;
     object-fit: cover;
     border-radius: 10px;
+    background-image: ${props => `url(${props.src})`};
+    background-size: 108%;
+    background-position: center;
 
     @media (max-width: 1023px) {
         min-width: 100px;
+        background-size: 116%;
     }
 `
 export const ContentInlineWrapper = styled.div`
-    width: 500px;
+    width: 200px;
     margin-left: 25px;
     
     @media (max-width: 1023px) {
-        width: 350px;
+        width: 160px;
         margin-left: 15px;
-    }
-    @media (max-width: 767px) {
-        width: 250px;
     }
     @media (max-width: 475px) {
         margin-left: 0;

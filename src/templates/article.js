@@ -30,31 +30,31 @@ const Article = ({ data }) => {
                 return <div>{children}</div>
             },
             [BLOCKS.HEADING_1]: (node, children) => {
-                return <div style={{ fontSize: '35px', fontWeight: '700' }}>{children}</div>
+                return <div style={{ fontSize: '35px', fontWeight: '700', padding: '20px 0 20px 0' }}>{children}</div>
             },
             [BLOCKS.HEADING_2]: (node, children) => {
-                return <div style={{ fontSize: '30px', fontWeight: '500' }}>{children}</div>
+                return <div style={{ fontSize: '30px', fontWeight: '500', padding: '20px 0 20px 0' }}>{children}</div>
             },
             [BLOCKS.HEADING_3]: (node, children) => {
-                return <div style={{ fontSize: '25px' }}>{children}</div>
+                return <div style={{ fontSize: '25px', padding: '20px 0 20px 0' }}>{children}</div>
             },
             [BLOCKS.HEADING_4]: (node, children) => {
-                return <div style={{ fontSize: '20px' }}>{children}</div>
+                return <div style={{ fontSize: '20px', fontWeight: '500', padding: '20px 0 20px 0' }}>{children}</div>
             },
             [BLOCKS.HEADING_5]: (node, children) => {
-                return <div style={{ fontSize: '20px' }}>{children}</div>
+                return <div style={{ fontSize: '20px', padding: '20px 0 20px 0' }}>{children}</div>
             },
             [BLOCKS.HEADING_6]: (node, children) => {
-                return <div style={{ fontSize: '14px' }}>{children}</div>
+                return <div style={{ fontSize: '14px', padding: '20px 0 20px 0' }}>{children}</div>
             },
             [BLOCKS.UL_LIST]: (node, children) => {
-                return <ul style={{ listStyleType: 'disc' }}>{children}</ul>
+                return <ul style={{ listStyleType: 'disc', padding: '20px 0 20px 0' }}>{children}</ul>
             },
             [BLOCKS.OL_LIST]: (node, children) => {
-                return <ol style={{ listStyleType: 'decimal' }}>{children}</ol>
+                return <ol style={{ listStyleType: 'decimal', padding: '20px 0 20px 0' }}>{children}</ol>
             },
             [BLOCKS.LIST_ITEM]: (node, children) => {
-                return <li style={{ marginLeft: '25px' }}>{children}</li>
+                return <li style={{ marginLeft: '25px', padding: '5px 0 5px 0' }}>{children}</li>
             },
             [BLOCKS.QUOTE]: (node, children) => {
                 return <QuoteBlock>{children}</QuoteBlock>
@@ -66,7 +66,7 @@ const Article = ({ data }) => {
                 return <div>{children}</div>
             },
             [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
-                return <ImgBlockArticleWrapper><ImgBlockArticle src={node.data.target.fixed.src} srcSet={node.data.target.fixed.srcSet} sizes="3x"/></ImgBlockArticleWrapper>
+                return <ImgBlockArticleWrapper><ImgBlockArticle src={node.data.target.fixed.src}/></ImgBlockArticleWrapper>
             },
             [INLINES.EMBEDDED_ENTRY]: (node, children) => {
                 return <div>{children}</div>
