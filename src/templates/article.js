@@ -66,7 +66,7 @@ const Article = ({ data }) => {
                 return <div>{children}</div>
             },
             [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
-                return <ImgBlockArticleWrapper><ImgBlockArticle src={node.data.target.fixed.src}/></ImgBlockArticleWrapper>
+                return <ImgBlockArticleWrapper><img src={node.data.target.fixed.src}/></ImgBlockArticleWrapper>
             },
             [INLINES.EMBEDDED_ENTRY]: (node, children) => {
                 return <div>{children}</div>
