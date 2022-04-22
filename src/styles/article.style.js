@@ -80,25 +80,11 @@ export const HyperlinkBlock = styled.a`
     padding: 5px;
     position: relative;
     transition: ease-in-out !important;
-    text-decoration: none;
+    text-decoration: underline;
 
-    ::after {
-        content: '';
-        background-color: #bf1e2e6a;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 5%;
-        width: 100%;
-        transition: ease-in-out !important;
-        z-index: -1;
-    }
-    :hover::after {
-        height: 100%;
-        transition: 0.2s ease-in-out !important;
-    }
     :hover {
         transition: 0.2s ease-in-out !important;
+        color: #BF1E2D;
     }
 `
 export const ImgBlockArticleWrapper = styled.div`
@@ -106,30 +92,4 @@ export const ImgBlockArticleWrapper = styled.div`
     display: flex;
     justify-content: center;
     padding: 10px 0;
-`
-export const ImgBlockArticle = styled.div`
-    border-radius: 15px;
-    background-image: ${props => `url(${props.src})`};
-    background-size: cover;
-    width: 90%;
-    height: 500px;
-
-    @media (max-width: 1535px) {
-        height: 400px;
-    }
-    @media (max-width: 1279px) {
-        height: 350px;
-    }
-    @media (max-width: 767px) {
-        height: 300px;
-    }
-    @media (max-width: 650px) {
-        width: 100%;
-    }
-    @media (max-width: 600px) {
-        height: 250px;
-    }
-    @media (max-width: 500px) {
-        height: 200px;
-    }
 `
